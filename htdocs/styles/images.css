@@ -1,0 +1,9 @@
+a img {border: none;}
+img.icon {vertical-align: middle;}
+img.button {cursor: pointer;}
+
+img.icon.print {
+	float: right;
+	cursor: pointer;
+	background: url("../images/icons/print.png") no-repeat center;
+}

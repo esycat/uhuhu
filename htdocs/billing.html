@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="description" />
+  <meta name="keywords" content="keywords" />
+  <title>UHUHU</title>
+  <link type="text/css" rel="stylesheet" media="screen" href="./styles/theme.css" />
+  <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie.css" /><![endif]-->
+  <!--[if lt IE 7]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie6.css" /><![endif]-->
+  <link type="text/css" rel="stylesheet" media="screen" href="./styles/sitelist.css" />
+  <link type="text/css" rel="stylesheet" media="screen" href="./styles/money.css" />
+  <link type="text/css" rel="stylesheet" media="print" href="./styles/print.css" />
+  <script type="text/javascript" src="./js/libs/jquery.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/common.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/money.js"></script>
+</head>
+
+<body>
+  <div id="body-wrapper">
+    <div id="auth">Пользователь: <a href="./login/">Не авторизован</a></div>
+    <div id="header">
+      <a href="/"><img src="./images/logotype.png" width="125" height="50" alt="UHUHU" id="logotype" /></a>
+      <div id="stats">У нас уже <var>20 790</var> клиентов и <var>2 000</var> каталогов.</div>
+    </div>
+    <div id="navigation">
+      <div class="strut left"><div class="rc tr"><div class="rc br"><div class="colin"></div></div></div></div>
+      <div class="strut right"><div class="rc tl"><div class="rc bl"><div class="colin"></div></div></div></div>
+      <div id="navigation-container">
+        <div id="mainmenu-container" class="rounded-corners">
+          <ul id="mainmenu">
+            <li class="first-child current"><a href="/">Главная</a></li>
+            <li><a href="">Мой UHUHU</a></li>
+            <li><a href="">О системе</a></li>
+            <li><a href="">Каталоги</a></li>
+            <li><a href="">Поддержка</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </div>
+        <ul id="submenu">
+          <li class="first-child current"><a href="">Главная</a></li>
+          <li><a href="">Регистрация</a></li>
+          <li><a href="">Вход</a></li>
+          <li><a href="">Расценки</a></li>
+          <li><a href="">Вопросы и ответы</a></li>
+        </ul>
+        <div class="cleaner"></div>
+      </div>
+    </div>
+    <div id="content">
+      <div class="header">
+        <div><div class="mark rounded-corners"></div></div>
+        <h1 class="title rounded-corners">Ваш баланс: 1200 руб.</h1>
+      </div>
+      <div id="sidebar">
+        <div id="sitelist">
+          <h3 class="rounded-corners">Список моих сайтов:</h3>
+          <ul>
+            <li>
+              <a href=""><img src="./images/icons/payment.png" width="22" height="22" alt="Оплатить" class="icon" title="Оплатить" /></a>
+              <a href="" class="site rounded-corners">yandex.ru</a>
+            </li>
+            <li class="current">
+              <a href=""><img src="./images/icons/payment.png" width="22" height="22" alt="Оплатить" class="icon" title="Оплатить" /></a>
+              <a href="" class="site rounded-corners">www.oem.ru</a>
+            </li>
+            <li>
+              <a href="" class="site rounded-corners">google.com</a>
+            </li>
+          </ul>
+          <div class="pagination">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="" class="current">3</a>
+          </div>
+        </div>
+      </div>
+      <div class="content-container">
+        <h3 class="hr"><img src="./images/icons/moneyin.png" width="22" height="22" alt="" class="icon" /> Пополнение счёта</h3>
+
+        <form action="" method="post" class="money" onsubmit="return confirm('Вы уверены?');">
+          <div class="amount">
+            <label for="quantity" style="font-weight: bold;">Сумма зачисления:</label>
+            <input type="text" name="quantity" value="" maxlength="32" id="quantity" class="text" style="width: 120px; text-align: right;" />&nbsp;руб.
+          </div>
+          <div class="method">
+            <strong>Способ платежа</strong>
+            <ul class="plain">
+              <li><input type="radio" name="moneyout" value="webmoney" id="moneyin_webmoney" class="radio" /><label for="moneyin_webmoney">Через систему WebMoney</label> (с&nbsp;кошелька или карты)</li>
+              <li><input type="radio" name="moneyout" value="yandexmoney" id="moneyin_yandexmoney" class="radio" /><label for="moneyin_yandexmoney">Через систему Яндекс.Деньги</label> (с&nbsp;кошелька или карты)</li>
+              <li><input type="radio" name="moneyout" value="bank" id="moneyin_bank" class="radio" /><label for="moneyin_bank">По квитанции Сбербанка</label></li>
+              <li><input type="radio" name="moneyout" value="card" id="moneyin_card" class="radio" /><label for="moneyin_card">Через карту Visa и MasterCard</label></li>
+            </ul>
+            <input type="image" src="./images/buttons/checkout.png" alt="Оплатить" title="Оплатить" class="button" />
+          </div>
+          <div class="cleaner"></div>
+        </form>
+
+        <h3 class="hr"><img src="./images/moneylog.png" width="22" height="22" alt="" class="icon" /> Движение денежных средств на партёнрском счету</h3>
+        <table class="moneylog full-width">
+          <tr class="in">
+            <td class="icon"></td>
+            <td class="quantity">200 руб.</td>
+            <td><a href="">Пополнение счёте через систему WebMoney</a></td>
+            <td class="date">2006-12-01 в 17:00</td>
+          </tr>
+          <tr class="out">
+            <td class="icon"></td>
+            <td class="quantity">500 руб.</td>
+            <td>
+              <a href="" onclick="moneyLogDetails(this); return false;">Оплата услуг регистрации сайта специалистом</a>
+              <div class="details invisible">Статус: платёж прошёл успешно<br />Оплата была произведена с кошелька: 12345667890</div>
+            </td>
+            <td class="date">2006-11-01 в 15:00</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="footer-placeholder"></div>
+  </div>
+  <div id="footer">
+    <div class="colin">
+      <div id="counters"><a href="http://top100.rambler.ru/top100/"><img src="./images/banners/rambler.png" width="88" height="31" alt="Rambler's Top100" /></a></div>
+      <div id="sitenav">
+        <a href=""><img src="./images/sitemap.png" width="24" height="21" alt="Карта сайта" title="Карта сайта" /></a>
+        <a href=""><img src="./images/email.png" width="24" height="21" alt="Написать письмо" title="Написать письмо" /></a>
+      </div>
+      <div id="copyright">&copy;&nbsp;2005&ndash;2007, система регистрации в каталогах <a href="/">UHUHU</a>.</div>
+    </div>
+  </div>
+</body>
+
+</html>

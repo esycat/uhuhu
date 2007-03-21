@@ -1,0 +1,117 @@
+#modules {
+  position: relative;
+  height: 500px;
+  border-left: 1px solid silver;
+  margin-left: 20%;
+  padding: .5%;
+
+}
+
+#modules #module_list {
+  width: 40%;
+  height: 100%;
+}
+
+#modules .module_group .header {
+  border: 1px solid darkgray;
+  padding: .4em 2%;
+  background-color: darkgray;
+  color: white;
+  font-size: normal;
+  font-weight: bold;
+  text-align: cneter;
+}
+
+#modules .module_group.selected .header {
+  color: yellow;
+}
+
+#modules .module_group .header:hover {
+  border-color: slateblue;
+}
+
+#modules .toolbar {
+  margin: 5px 0;
+  padding: .4em 2%;
+  background-color: #eeeeee;
+  -moz-border-radius: 1em;
+}
+
+#modules .toolbar button {
+  margin: 2px;
+}
+
+ul.modules {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+ul.modules li {
+  border: 1px solid silver;
+  margin: 2px 0;
+  padding: 0;
+  background-color: darkgray;
+  list-style: none;
+}
+
+ul.modules.sortable li {
+  padding: 0 10px 0 0;
+  cursor: move;
+}
+
+ul.modules li:hover {
+  border-color: slateblue;
+}
+
+ul.modules li a {
+  display: block;
+  margin: 0;
+  padding: .5em 2%;
+  background-color: lightgrey;
+  cursor: default;
+}
+
+ul.modules li.selected a {
+  background-color: beige;
+}
+
+ul.modules#available_modules {
+}
+
+#module_properties {
+  position: absolute;
+  right: 1%;
+  width: 56%;
+  height: 100%;
+  border: 1px dashed silver;
+  padding: 1%;
+}
+
+#module_properties div.form {
+  display: none;
+}
+
+#module_properties div.field {
+  clear: both;
+  margin: 1px 0;
+  padding: 2px;
+}
+
+#module_properties label {
+  display: block;
+  float: left;
+  clear: left;
+  width: 20%;
+  height: 20px;
+  padding: 3px 10px;
+  font-weight: bold;
+  text-align: right;
+}
+
+#module_properties input.text,
+#module_properties textarea {
+  width: 55%;
+  border: 1px solid silver;
+  padding: .2em;
+}

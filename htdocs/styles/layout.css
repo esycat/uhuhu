@@ -1,0 +1,124 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+body {
+	position: relative;
+	min-height: 100%;
+}
+
+#auth, #header, #navigation, #content, #footer {clear: both;}
+
+#body-wrapper {
+	height: 100%;
+	min-height: 100%;
+}
+
+body > #body-wrapper {
+	height: auto !important;
+}
+
+#auth {
+	padding: .5em .6em .6em .6em;
+	background-color: #ebebeb;
+	text-align: right;
+	line-height: 100%;
+}
+
+#auth a {
+	color: black !important;
+	text-decoration: underline !important;
+}
+
+#header {
+	position: relative;
+	height: 50px;
+}
+
+#logotype {
+	position: absolute;
+	left: 0;
+}
+
+#stats {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 4px 8px;
+}
+
+#inbox {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 2px 8px;
+}
+
+#content,
+body.home #content-first,
+body.home #content-second {
+	clear: both;
+	margin: 5px 10px;
+	padding: 10px 32px;
+}
+
+.content-container {
+	position: relative;
+	margin: 10px 0 10px 42px;
+}
+
+#sidebar {
+	float: right;
+	clear: right;
+	width: 255px;
+	margin: 10px 0;
+}
+
+#adv-line {
+	clear: both;
+	width: 100%;
+	height: 35px;
+	margin: 10px 0;
+	background-color: #ebebeb;
+}
+
+
+/* Footer */
+#footer-placeholder {height: 61px;}
+#footer {margin-top: -61px;}
+
+#footer .colin {
+	height: 50px;
+	border-top: 1px dashed black;
+	margin: 0 10px;
+	padding: 5px;
+}
+
+#counters {
+	float: left;
+	clear: left;
+	padding: 5px 0;
+}
+
+#sitenav, #copyright {
+	float: right;
+	clear: right;
+}
+
+#sitenav a {
+	display: block;
+	float: left;
+	margin-left: 5px;
+}
+
+#copyright {
+	padding: .2em 0;
+}

@@ -1,0 +1,53 @@
+/* Money form */
+#content form.money .amount,
+#content form.money .method {
+	float: left;
+}
+
+#content form.money .amount {
+	float: left;
+	width: 160px;
+	padding: 0 25px;
+}
+
+#content form.money .amount label {
+	display: block;
+	font-weight: bold;
+}
+
+#content form.money .amount input.text {
+	width: 120px;
+	text-align: right;
+}
+
+/* Money log */
+table.moneylog {
+	border-collapse: collapse;
+}
+
+table.moneylog tr {
+	vertical-align: top;
+}
+
+table.moneylog td {
+	border-bottom: 1px dashed #d0d0d0;
+	padding: .2em .4em;
+}
+
+table.moneylog td.icon {
+	border: none;
+	background: no-repeat center .65em;
+}
+
+table.moneylog tr.in td.icon {background-image: url('../images/arrows/chevron_orange_down.png');}
+table.moneylog tr.out td.icon {background-image: url('../images/arrows/chevron_blue_up.png');}
+
+table.moneylog td.quantity {
+	width: 15%;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+table.moneylog .details {
+	font-size: 85%;
+}

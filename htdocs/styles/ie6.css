@@ -1,0 +1,13 @@
+img {behavior: url("./js/pngbehavior.htc");}
+
+input.text, textarea {margin-left: 0;}
+
+#navigation #mainmenu a {line-height: 92.5%;}
+
+#content form .field .controls {width: 26.5%;}
+#content form .field .status {margin-left: 0;}
+
+#content form#login .field .controls {width: 55% !important;}
+#content form#login .field#passkeyfield .controls {width: 27% !important;}
+#content form#login .field#passkeyfield .misc {width: 27% !important;}
+

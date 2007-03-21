@@ -1,0 +1,12 @@
+ul.actions {
+	float: left;
+	width: 43.5%;
+	border-left: 1px solid black;
+	margin: 1em 1% !important;
+	padding: 1% !important;
+}
+
+ul.actions.first-child {
+	border: none;
+}
+

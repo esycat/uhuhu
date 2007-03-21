@@ -1,0 +1,88 @@
+#navigation {
+	position: relative;
+	width: 100%;
+}
+
+#navigation .strut {
+	position: absolute;
+	background-color: #4c94d3;
+}
+#navigation .strut.left {left: 0;}
+#navigation .strut.right {right: 0;}
+
+#navigation .strut .colin {
+	width: 40px;
+	height: 2.1em;
+}
+
+#navigation #navigation-container {margin: 0 42px;}
+
+#navigation #mainmenu-container {
+	width: 100%;
+	background-color: #205c8f;
+}
+
+#navigation ul {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation ul#mainmenu {
+	height: 2.1em;
+	padding: 0 2em;
+	background: url('../images/arrows/nav.png') no-repeat 1em center;
+}
+
+#navigation ul#submenu {
+	float: left;
+	padding: 0 3.8em;
+	background: url('../images/arrows/return_black.png') no-repeat 2.8em center;
+}
+
+#navigation ul li {
+	float: left;
+	margin: 0;
+	padding: 0;  list-style: none;
+}
+
+#navigation ul#mainmenu li {
+	padding: 0.3em 0;
+}
+
+#navigation ul#mainmenu li.current {
+	background: url('../images/arrows/general_white_down.png') no-repeat top;
+}
+
+#navigation ul#submenu li {
+	padding-left: 2px;
+	background: url('../images/middledot.png') no-repeat left 55%;
+}
+
+#navigation ul#submenu li:first-child,
+#navigation ul#submenu li.first-child {
+	padding: 0;
+	background: none;
+}
+
+#navigation a {
+	display: block;
+	text-decoration: none !important;
+	text-transform: lowercase;
+	white-space: nowrap;
+}
+
+#navigation #mainmenu a {
+	padding: 0.25em 0.55em 0.25em 0.6em;
+	background: url('../images/border-vertical.png') repeat-y left;
+	color: #ebebeb;
+	line-height: 100%;
+}
+
+#navigation ul#mainmenu li:first-child a,
+#navigation ul#mainmenu li.first-child a {
+	background: none;
+}
+
+#navigation ul#submenu a {padding: .3em .4em;}
+#navigation ul#submenu li.current a {text-decoration: underline !important;}

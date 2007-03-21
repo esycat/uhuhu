@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="description" />
+  <meta name="keywords" content="keywords" />
+  <title>UHUHU</title>
+  <link type="text/css" rel="stylesheet" media="screen" href="./styles/theme.css" />
+  <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie.css" /><![endif]-->
+  <!--[if lt IE 7]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie6.css" /><![endif]-->
+  <link type="text/css" rel="stylesheet" media="screen" href="./styles/catreg.css" />
+  <link type="text/css" rel="stylesheet" media="print" href="./styles/print.css" />
+  <script type="text/javascript" src="./js/libs/jquery.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/common.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/inputplaceholder.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/catreg.js"></script>
+</head>
+
+<body>
+  <div id="body-wrapper">
+    <div id="auth">Пользователь: <a href="./login/">Не авторизован</a></div>
+    <div id="header">
+      <a href="/"><img src="./images/logotype.png" width="125" height="50" alt="UHUHU" id="logotype" /></a>
+      <div id="stats">У нас уже <var>20 790</var> клиентов и <var>2 000</var> каталогов.</div>
+    </div>
+    <div id="navigation">
+      <div class="strut left"><div class="rc tr"><div class="rc br"><div class="colin"></div></div></div></div>
+      <div class="strut right"><div class="rc tl"><div class="rc bl"><div class="colin"></div></div></div></div>
+      <div id="navigation-container">
+        <div id="mainmenu-container" class="rounded-corners">
+          <ul id="mainmenu">
+            <li class="first-child current"><a href="/">Главная</a></li>
+            <li><a href="">Мой UHUHU</a></li>
+            <li><a href="">О системе</a></li>
+            <li><a href="">Каталоги</a></li>
+            <li><a href="">Поддержка</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </div>
+        <ul id="submenu">
+          <li class="first-child current"><a href="">Главная</a></li>
+          <li><a href="">Регистрация</a></li>
+          <li><a href="">Вход</a></li>
+          <li><a href="">Расценки</a></li>
+          <li><a href="">Вопросы и ответы</a></li>
+        </ul>
+        <div class="cleaner"></div>
+      </div>
+    </div>
+    <div id="content">
+      <div class="header">
+        <div><div class="mark rounded-corners"></div></div>
+        <h1 class="title rounded-corners">Выбор рубрик в каталогах для сайта <a href="">www.oem.ru</a></h1>
+      </div>
+      <div class="content-container">
+        <form action="" method="post">
+          <div id="searchbox" class="info rounded-corners">
+            <div class="title">
+              <label for="query" class="title">Автовыбор категорий:</label>
+              <span>(слова или их части, от 4-х символов каждое)</span>
+            </div>
+            <input type="text" name="query" value="морфологический поиск для помощи в выборе рубрик" maxlength="255" id="query" class="text placeholder" />
+            <input type="image" src="./images/buttons/select.png" alt="Выбрать" title="Выбрать" class="button" />
+            <div class="cleaner"></div>
+            <a href="popup.html" class="advanced" onclick="openPopup(this.href, 'advancedsearch'); return false;">Дополнительные возможности поиска&hellip;</a>
+            <input type="checkbox" name="filter" id="filter" class="checkbox" /><label for="filter">Выводить только те каталоги, в которых есть подходящие категории</label>
+            <div class="cleaner"></div>
+          </div>
+
+          <div id="sidebar">
+            <div class="orange rounded-corners">
+              <ul class="hint">
+                <li>Категории выбраны у&nbsp;<var>1243</var>&nbsp;каталогов</li>
+                <li>Осталось указать категории у&nbsp;<var>109</var>&nbsp;каталогов</li>
+              </ul>
+            </div>
+          </div>
+
+          <ul class="form catreg">
+            <li class="type-direct">
+              <div class="type"><input type="checkbox" name="catalog1" id="catalog1" class="checkbox" /></div>
+              <div class="colin">
+                <div class="title">Каталог: <a href="">www.ru</a> <span class="rank">тИЦ: 2010; PR: 10</span></div>
+                <div class="theme">Тематика: Общие</div>
+                <div class="field">
+                  <select name="catalog1_category" id="catalog1_category">
+                    <option class="selected">Категория 1</option>
+                    <option>Категория 2</option>
+                    <option>Категория 3</option>
+                  </select>
+                </div>
+              </div>
+            </li>
+            <li class="type-redirect">
+              <div class="type"><input type="checkbox" name="catalog2" id="catalog2" class="checkbox" /></div>
+              <div class="colin">
+                <div>Каталог: <a href="">www.ru</a> <span class="rank">тИЦ: 2010; PR: 10</span></div>
+                <div>Тематика: Общие</div>
+                <div class="field">
+                  <select name="catalog2_category" id="catalog2_category">
+                    <option>Не указана</option>
+                    <option>Категория 1</option>
+                    <option class="selected">Категория 2</option>
+                    <option>Категория 3</option>
+                  </select>
+                </div>
+              </div>
+            </li>
+            <li class="type-combine">
+              <div class="type"><input type="checkbox" name="catalog3" id="catalog3" class="checkbox" /></div>
+              <div class="colin">
+                <div>Каталог: <a href="">www.ru</a> <span class="rank">тИЦ: 2010; PR: 10</span></div>
+                <div>Тематика: Общие</div>
+                <div class="field">
+                  <select name="catalog3_category" id="catalog3_category">
+                    <option>Не указана</option>
+                    <option>Категория 1</option>
+                    <option class="selected">Категория 2</option>
+                    <option>Категория 3</option>
+                  </select>
+                </div>
+              </div>
+            </li>
+            <li class="type-direct">
+              <div class="type"><input type="checkbox" name="catalog4" id="catalog4" class="checkbox" /></div>
+              <div class="colin">
+                <div>Каталог: <a href="">www.ru</a> <span class="rank">тИЦ: 2010; PR: 10</span></div>
+                <div>Тематика: Общие</div>
+                <div class="field">
+                  <select name="catalog4_category" id="catalog4_category">
+                    <option>Не указана</option>
+                    <option>Категория 1</option>
+                    <option class="selected">Категория 2</option>
+                    <option>Категория 3</option>
+                  </select>
+                  <img src="./images/catreg_multiple.png" width="8" height="13" alt="[найдено несколько категорий]" title="Найдено несколько категорий" class="icon" style="margin: 0 5px;" />
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="cleaner">
+            <input type="image" src="./images/buttons/save_and_continue.png" alt="Сохранить и продолжить" title="Сохранить и продолжить" class="button" />
+            <input type="image" src="./images/buttons/done.png" alt="Завешить" title="Завешить" class="button" />
+          </div>
+        </form>
+
+        <h4>Информеры</h4>
+
+        <ul class="plain">
+          <li><img src="./images/catreg_type_direct.png" width="4" height="12" alt="" class="icon" />&nbsp;&mdash; каталог ставит <a href="">прямые ссылки</a><sup>*</sup></li>
+          <li><img src="./images/catreg_type_redirect.png" width="4" height="12" alt="" class="icon" />&nbsp;&mdash; каталог ставит ссылки через <a href="">перенаправление</a><sup>*</sup></li>
+          <li><img src="./images/catreg_multiple.png" width="8" height="13" alt="" class="icon" />&nbsp;&mdash; в&nbsp;рубрикаторе каталогов было найдено несколько подходящих категорий</li>
+        </ul>
+
+        <p class="footnote"><sup>*</sup> Если идёт совмещение двух цветов, то это означает, что у каталога идёт совмещение двух характеристик.</p>
+      </div>
+    </div>
+    <div id="footer-placeholder"></div>
+  </div>
+  <div id="footer">
+    <div class="colin">
+      <div id="counters"><a href="http://top100.rambler.ru/top100/"><img src="./images/banners/rambler.png" width="88" height="31" alt="Rambler's Top100" /></a></div>
+      <div id="sitenav">
+        <a href=""><img src="./images/sitemap.png" width="24" height="21" alt="Карта сайта" title="Карта сайта" /></a>
+        <a href=""><img src="./images/email.png" width="24" height="21" alt="Написать письмо" title="Написать письмо" /></a>
+      </div>
+      <div id="copyright">&copy;&nbsp;2005&ndash;2007, система регистрации в каталогах <a href="/">UHUHU</a>.</div>
+    </div>
+  </div>
+</body>
+
+</html>

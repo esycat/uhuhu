@@ -1,0 +1,27 @@
+.content-container {
+	padding-right: 50%;
+}
+
+#content #adv-main {
+	float: right;
+	clear: right;
+	margin: 10px 0;
+}
+
+/* Login form */
+#content form#login .field .label {width: 38%;}
+#content form#login .field .controls {width: 61%;}
+
+#content form#login .field#passkeyfield .controls {width: 30%;}
+#content form#login .field#passkeyfield .misc {
+	display: block;
+	width: 30%;
+	text-align: center;
+	overflow: hidden;
+}
+
+#content form#login .buttons a {
+	display: block;
+	float: right;
+	margin-right: 2em;
+}

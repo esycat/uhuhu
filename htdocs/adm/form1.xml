@@ -1,0 +1,15 @@
+<div id="moduleForm">
+  <p>Comment: Module 1 configuration form</p>
+  <div class="field">
+    <label for="module_title">Module title:</label>
+    <input type="text" name="" value="" id="module_title" class="text" />
+  </div>
+  <div class="field">
+    <label for="field1">Label for field 1:</label>
+    <input type="text" name="" value="" id="field1" class="text" />
+  </div>
+  <div class="field">
+    <label for="field2">Label for field 2:</label>
+    <textarea name="field2" cols="40" rows="8" id="field2"></textarea>
+  </div>
+</div>

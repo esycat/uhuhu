@@ -1,0 +1,66 @@
+#content #searchbox {
+	margin-bottom: 10px;
+}
+
+#content #searchbox .title {
+	margin: .2em 0;
+}
+
+#content #searchbox .title label {
+	font-weight: bold;
+	vertical-align: baseline;
+}
+
+#content #searchbox input#query {
+	width: 90%;
+	vertical-align: middle;
+}
+
+#content #searchbox input.button {
+	vertical-align: middle;
+}
+
+#content #searchbox input.checkbox {
+	margin-right: .4em;
+}
+
+#content #searchbox a.advanced {
+	display: block;
+	float: right;
+	padding: .2em .4em;
+	padding-left: 16px;
+	background: url("../images/plus.png") no-repeat 4px 60%;
+}
+
+#sidebar {margin: 0;}
+
+#content ul.catreg {clear: left;}
+#content ul.catreg li {clear: left;}
+
+#content ul.catreg .type {
+	float: left;
+	width: 20px;
+	padding: .2em 7px;
+	background: no-repeat left;
+}
+
+#content ul.catreg li.type-direct   .type {background-image: url('../images/catreg_type_direct.png');}
+#content ul.catreg li.type-redirect .type {background-image: url('../images/catreg_type_redirect.png');}
+#content ul.catreg li.type-another  .type {background-image: url('../images/catreg_type_another.png');}
+#content ul.catreg li.type-combine  .type {background-image: url('../images/catreg_type_combine.png');}
+#content ul.catreg li.type-combine2 .type {background-image: url('../images/catreg_type_combine2.png');}
+
+#content ul.catreg .colin {
+	float: left;
+}
+
+#content ul.catreg .title,
+#content ul.catreg .theme,
+#content ul.catreg .field {
+	margin: 0;
+	margin-bottom: .4em;
+}
+
+#content select {
+	vertical-align: middle;
+}

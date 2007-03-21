@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="description" />
+  <meta name="keywords" content="keywords" />
+  <title>UHUHU</title>
+  <link type="text/css" rel="stylesheet" media="screen" href="./styles/theme.css" />
+  <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie.css" /><![endif]-->
+  <!--[if lt IE 7]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie6.css" /><![endif]-->
+  <link type="text/css" rel="stylesheet" media="screen" href="./styles/sitelist.css" />
+  <link type="text/css" rel="stylesheet" media="print" href="./styles/print.css" />
+  <script type="text/javascript" src="./js/libs/jquery.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/common.js"></script>
+</head>
+
+<body>
+  <div id="body-wrapper">
+    <div id="auth">Пользователь: <a href="./login/">Не авторизован</a></div>
+    <div id="header">
+      <a href="/"><img src="./images/logotype.png" width="125" height="50" alt="UHUHU" id="logotype" /></a>
+      <div id="stats">У нас уже <var>20 790</var> клиентов и <var>2 000</var> каталогов.</div>
+    </div>
+    <div id="navigation">
+      <div class="strut left"><div class="rc tr"><div class="rc br"><div class="colin"></div></div></div></div>
+      <div class="strut right"><div class="rc tl"><div class="rc bl"><div class="colin"></div></div></div></div>
+      <div id="navigation-container">
+        <div id="mainmenu-container" class="rounded-corners">
+          <ul id="mainmenu">
+            <li class="first-child current"><a href="/">Главная</a></li>
+            <li><a href="">Мой UHUHU</a></li>
+            <li><a href="">О системе</a></li>
+            <li><a href="">Каталоги</a></li>
+            <li><a href="">Поддержка</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </div>
+        <ul id="submenu">
+          <li class="first-child current"><a href="">Главная</a></li>
+          <li><a href="">Регистрация</a></li>
+          <li><a href="">Вход</a></li>
+          <li><a href="">Расценки</a></li>
+          <li><a href="">Вопросы и ответы</a></li>
+        </ul>
+        <div class="cleaner"></div>
+      </div>
+    </div>
+    <div id="content">
+      <div class="header">
+        <div><div class="mark rounded-corners"></div></div>
+        <h1 class="title rounded-corners">Начало регистрации сайта <a href="http://www.oem.ru/">www.oem.ru</a></h1>
+      </div>
+      <div id="sidebar">
+        <div id="sitelist">
+          <h3 class="rounded-corners">Список моих сайтов:</h3>
+          <ul>
+            <li>
+              <a href=""><img src="./images/icons/payment.png" width="22" height="22" alt="Оплатить" class="icon" title="Оплатить" /></a>
+              <a href="" class="site rounded-corners">yandex.ru</a>
+            </li>
+            <li class="current">
+              <a href=""><img src="./images/icons/payment.png" width="22" height="22" alt="Оплатить" class="icon" title="Оплатить" /></a>
+              <a href="" class="site rounded-corners">www.oem.ru</a>
+            </li>
+            <li>
+              <a href="" class="site rounded-corners">google.com</a>
+            </li>
+          </ul>
+          <div class="pagination">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="" class="current">3</a>
+          </div>
+        </div>
+      </div>
+      <div class="content-container">
+        <p>На этой странице вам необходимо выбрать типы тематик, наиболее подходящие для вашего сайта <a href="">www.oem.ru</a>, благодоря чему вы отсеите каталоги, которые не подходять для вашего сайта в силу своей узкой специализации на каком-то конкретном направлении.</p>
+        <form action="" method="post">
+          <ul class="form">
+            <li><input type="checkbox" name="catalogs['general']" id="catalog_general" class="checkbox" /><label for="catalog_general">Общетематические каталоги</label> <span class="counter">/ 1009</span></li>
+            <li><input type="checkbox" name="catalogs['auto']" id="catalog_auto" class="checkbox" /><label for="catalog_auto">Автотранспорт</label> <span class="counter">/ 89</span></li>
+            <li><input type="checkbox" name="catalogs['business']" id="catalog_business" class="checkbox" /><label for="catalog_business">Общетематические каталоги</label> <span class="counter">/ 21</span></li>
+            <li><input type="checkbox" name="catalogs['homeandfanily']" id="catalog_homeandfanily" class="checkbox" /><label for="catalog_homeandfanily">Дом и семья</label> <span class="counter">/ 15</span></li>
+          </ul>
+
+          <h4>Дополнительные фильтры каталогов</h4>
+
+          <table class="form">
+            <tr>
+              <td class="label"><label for="tic">тИЦ:</label></td>
+              <td>от</td>
+              <td><input type="text" name="tic_min" value="0" maxlength="7" id="tic" style="width: 50px;" /></td>
+              <td>до</td>
+              <td><input type="text" name="tic_max" value="1000" maxlength="7" style="width: 50px;" /></td>
+            </tr>
+            <tr>
+              <td class="label"><label for="pr">PR:</label></td>
+              <td>от</td>
+              <td><input type="text" name="pr_min" value="0" maxlength="2" id="pr" style="width: 50px;" /></td>
+              <td>до</td>
+              <td><input type="text" name="pr_max" value="10" maxlength="2" style="width: 50px;" /></td>
+            </tr>
+          </table>
+
+          <ul class="plain">
+            <li><input type="checkbox" name="filter_redirect" id="filter_redirect" class="checkbox" /><label for="filter_redirect">Не регистрировать в каталогах, которые ставит ссылку черех <a href="">перенаправление</a></label></li>
+            <li><input type="checkbox" name="filter_backlink" id="filter_backlink" class="checkbox" /><label for="filter_backlink">Не регистрировать в каталогах, которые требуют <a href="">обратную ссылку</a></label></li>
+          </ul>
+
+          <input type="image" src="./images/buttons/continue.png" alt="Продолжить" title="Продолжить" class="button" style="margin-top: 15px;" />
+        </form>
+      </div>
+    </div>
+    <div id="footer-placeholder"></div>
+  </div>
+  <div id="footer">
+    <div class="colin">
+      <div id="counters"><a href="http://top100.rambler.ru/top100/"><img src="./images/banners/rambler.png" width="88" height="31" alt="Rambler's Top100" /></a></div>
+      <div id="sitenav">
+        <a href=""><img src="./images/sitemap.png" width="24" height="21" alt="Карта сайта" title="Карта сайта" /></a>
+        <a href=""><img src="./images/email.png" width="24" height="21" alt="Написать письмо" title="Написать письмо" /></a>
+      </div>
+      <div id="copyright">&copy;&nbsp;2005&ndash;2007, система регистрации в каталогах <a href="/">UHUHU</a>.</div>
+    </div>
+  </div>
+</body>
+
+</html>

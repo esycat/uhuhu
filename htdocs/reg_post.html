@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="description" />
+  <meta name="keywords" content="keywords" />
+  <title>UHUHU</title>
+  <link type="text/css" rel="stylesheet" media="screen" href="./styles/theme.css" />
+  <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie.css" /><![endif]-->
+  <!--[if lt IE 7]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie6.css" /><![endif]-->
+  <link type="text/css" rel="stylesheet" media="print" href="./styles/print.css" />
+  <script type="text/javascript" src="./js/libs/jquery.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/common.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/progressbar.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/sitereg.js"></script>
+</head>
+
+<body>
+  <div id="body-wrapper">
+    <div id="auth">Пользователь: <a href="./login/">Не авторизован</a></div>
+    <div id="header">
+      <a href="/"><img src="./images/logotype.png" width="125" height="50" alt="UHUHU" id="logotype" /></a>
+      <div id="stats">У нас уже <var>20 790</var> клиентов и <var>2 000</var> каталогов.</div>
+    </div>
+    <div id="navigation">
+      <div class="strut left"><div class="rc tr"><div class="rc br"><div class="colin"></div></div></div></div>
+      <div class="strut right"><div class="rc tl"><div class="rc bl"><div class="colin"></div></div></div></div>
+      <div id="navigation-container">
+        <div id="mainmenu-container" class="rounded-corners">
+          <ul id="mainmenu">
+            <li class="first-child current"><a href="/">Главная</a></li>
+            <li><a href="">Мой UHUHU</a></li>
+            <li><a href="">О системе</a></li>
+            <li><a href="">Каталоги</a></li>
+            <li><a href="">Поддержка</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </div>
+        <ul id="submenu">
+          <li class="first-child current"><a href="">Главная</a></li>
+          <li><a href="">Регистрация</a></li>
+          <li><a href="">Вход</a></li>
+          <li><a href="">Расценки</a></li>
+          <li><a href="">Вопросы и ответы</a></li>
+        </ul>
+        <div class="cleaner"></div>
+      </div>
+    </div>
+    <div id="content">
+      <div class="header">
+        <div><div class="mark rounded-corners"></div></div>
+        <h1 class="title rounded-corners">Подача заявок на регистрацию в каталогах для сайта <a href="">www.oem.ru</a></h1>
+      </div>
+      <div class="content-container">
+        <div class="info rounded-corners">
+          <div id="reg-progressbar" class="progressbar">
+            <div class="metre"><input type="hidden" name="session_id" value="123" id="reg-sessionid" /></div>
+            <div class="message">Регистрации завершены. <a href="">Посмотреть полный отчёт&hellip;</a></div>
+          </div>
+        </div>
+
+        <ul class="chevroned cleaner">
+          <li>Отправлено заявок: <var id="reg-complete">0</var> из <var id="reg-total">0</var></li>
+          <li>Из них успешно: <var id="reg-success">0</var></li>
+          <li>Обнаружено неработающих каталогов: <var id="reg-notrespond">0</var></li>
+          <li>Обнаружено неопознанных ошибок: <var id="reg-errors">0</var><span id="reg-errors-showhide" class="invisible"> / <a href="" onclick="sitereg.switchDebugForm(); return false;"><span id="reg-errors-show">посмотреть ошибки</span><span id="reg-errors-hide" class="invisible">скрыть ошибки</span></a></span></li>
+        </ul>
+
+        <hr />
+
+        <form action="" method="post" id="debug" class="brief invisible" target="_blank">
+          <h4>Просмотр и&nbsp;тестирование ошибок</h4>
+          <p>Пожалуйста убедитесь в&nbsp;корректности автозаполнения полей и&nbsp;нажмите кнопку &laquo;отправить&raquo;.</p>
+
+          <div id="reg-form"></div>
+
+          <div id="reg-form-loading" class="info rounded-corners invisible">Пожалуйста, подождите, идёт загрузка&hellip;</div>
+
+          <div class="buttons">
+            <input type="hidden" name="site_id" value="1" />
+            <div style="float: left; height: 19px; margin-right: 10px; padding-right: 10px; border-right: 1px dotted black;"><input type="image" src="./images/buttons/send.png" alt="Отправить" title="Отправить" /></div>
+            <img src="./images/buttons/register-success.png" width="168" height="19" alt="регистрация прошла успешно" class="button" onclick="sitereg.siteSuccess();" />
+            <img src="./images/buttons/register-fail.png" width="116" height="19" alt="каталог не работает" class="button" onclick="sitereg.siteFail();" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="footer-placeholder"></div>
+  </div>
+  <div id="footer">
+    <div class="colin">
+      <div id="counters"><a href="http://top100.rambler.ru/top100/"><img src="./images/banners/rambler.png" width="88" height="31" alt="Rambler's Top100" /></a></div>
+      <div id="sitenav">
+        <a href=""><img src="./images/sitemap.png" width="24" height="21" alt="Карта сайта" title="Карта сайта" /></a>
+        <a href=""><img src="./images/email.png" width="24" height="21" alt="Написать письмо" title="Написать письмо" /></a>
+      </div>
+      <div id="copyright">&copy;&nbsp;2005&ndash;2007, система регистрации в каталогах <a href="/">UHUHU</a>.</div>
+    </div>
+  </div>
+</body>
+
+</html>

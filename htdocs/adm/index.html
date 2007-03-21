@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+  <title>CMS Module Control</title>
+  <link rel="stylesheet" type="text/css" href="./styles/adm.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/modules.css" />
+  <!--[if IE]>
+  <link rel="stylesheet" type="text/css" href="./styles/modules.msie.css" />
+  <![endif]-->
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <!--
+  <script type="text/javascript" src="js/prototype.js"></script>
+  <script type="text/javascript" src="js/scriptaculous/scriptaculous.js"></script>
+  -->
+  <script type="text/javascript" src="js/tool-man/core.js"></script>
+  <script type="text/javascript" src="js/tool-man/events.js"></script>
+  <script type="text/javascript" src="js/tool-man/css.js"></script>
+  <script type="text/javascript" src="js/tool-man/coordinates.js"></script>
+  <script type="text/javascript" src="js/tool-man/drag.js"></script>
+  <script type="text/javascript" src="js/tool-man/dragsort.js"></script>
+  <script type="text/javascript" src="js/tool-man/cookies.js"></script>
+  <script type="text/javascript" src="js/modules.js"></script>
+</head>
+
+<body>
+  <div id="modules">
+    <form action="" method="post" id="module_form">
+      <div id="module_properties">
+      </div>
+
+      <div id="module_list">
+
+        <div id="active_modules">
+
+          <div class="module_group">
+            <div class="header">Group 1</div>
+            <ul class="modules sortable">
+              <li id="module111"><input type="hidden" name="modules[id]" value="1" /><a>Module 1</a></li>
+              <li id="module112"><input type="hidden" name="modules[id]" value="2" /><a>Module 2</a></li>
+            </ul>
+          </div>
+
+          <div class="module_group">
+            <div class="header">Group 2</div>
+            <ul class="modules sortable">
+              <li id="module121"><input type="hidden" name="modules[id]" value="1" /><a>Module 1</a></li>
+              <li id="module122"><input type="hidden" name="modules[id]" value="2" /><a>Module 2</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="toolbar">
+          <button type="button" id="buttonAdd" onclick="modules.addSelected();">Add</button>
+          <button type="button" id="buttonRemove" onclick="modules.removeSelected();">Remove</button>
+          <button type="submit" id="buttonSave">Save</button>
+        </div>
+
+
+        <ul id="available_modules" class="modules">
+          <li><input type="hidden" name="modules[id]" value="3" /><a>Module 3</a></li>
+          <li><input type="hidden" name="modules[id]" value="4" /><a>Module 4</a></li>
+        </ul>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

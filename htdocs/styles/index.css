@@ -1,0 +1,115 @@
+#content {
+	margin: 0;
+	padding: 0;
+}
+
+#content-first {
+	border-bottom: 1px dashed #d0d0d0;
+}
+
+/* Infoblocks */
+#content .infoblock {
+	float: left;
+	width: 32%;
+	padding: 0;
+}
+
+#content .infoblock.ib-middle {margin: 0 2%;}
+
+#content .infoblock.tearbottom-ib {
+	height: 0 !important;
+	padding: 0 !important;
+	border-bottom: 1px dashed #d0d0d0;
+}
+
+#content .infoblock .colin {
+	clear: both;
+	padding: 8px;
+}
+
+#content .infoblock h4 {
+	margin: 0;
+	padding: 0;
+	background: none;
+}
+
+#content .infoblock.news .content p {margin: 0;}
+
+#content .infoblock ul li {clear: both;}
+
+#content .infoblock .specialinfo {
+	clear: both;
+	border-left: 2px solid #f99f20;
+	padding: .2em 1.2em .3em 1.2em;
+	background-color: #ebebeb;
+}
+
+#content #adv-main {
+	margin: 5px auto;
+}
+
+#content .infoblock .header-cap {
+	position: relative;
+	top: .8em;
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+#content .infoblock .header-cap .corner {
+	position: absolute;
+	z-index: 25;
+	top: 0;
+	width: 5px;
+	height: 5px;
+}
+
+#content .infoblock .header-cap .corner.left {
+	left: 0;
+	background: url('../images/ib-hc-l.png') no-repeat left top;
+}
+
+#content .infoblock .header-cap .corner.right {
+	right: 0;
+	background: url('../images/ib-hc-r.png') no-repeat right top;
+}
+
+#content .infoblock .header-cap .hr {
+	border-top: 1px solid #d0d0d0;
+	margin: 0 5px;
+}
+
+#content .infoblock .header-cap h3 {
+	display: inline;
+	position: absolute;
+	top: -0.65em;
+	left: 35px;
+	margin: 0;
+	padding: 0 1.5em 0 .5em;
+	background: white url('../images/arrows/general_orange_down.png') no-repeat 94% .5em;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+#content .infoblock .header-cap h3 img.icon {
+	margin-right: .5em;
+	vertical-align: baseline;
+}
+
+
+/* Registration form */
+#content form#registration .field .label {width: 35%;}
+#content form#registration .field .controls {width: 53%;}
+#content form#registration .field .misc {
+	display: block;
+	width: 9%;
+}
+#content form#registration .field .message {
+	float: none;
+	clear: both;
+	width: auto;
+	margin: 0;
+}
+
+#content form#registration .field .label .footnote {margin-left: 2em;}
+
+#content form#registration .buttons {margin-right: 10%;}

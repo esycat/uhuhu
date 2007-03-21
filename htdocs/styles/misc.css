@@ -1,0 +1,24 @@
+hr {
+	height: 0;
+	border: none;
+	border-top: 1px dashed #d0d0d0;
+	margin: .8em 0;
+}
+
+hr.divider {
+	margin: 12px 0 20px 0;
+}
+
+.fixed-width, .half-width, .onethird-width {margin: auto !important;}
+
+.full-width     {width: 100% !important;}
+.fixed-width    {width: 65% !important;}
+.half-width     {width: 50% !important;}
+.onethird-width {width: 33% !important;}
+
+.cleaner {clear: both;}
+.cleaner-left {clear: left;}
+.cleaner-right {clear: right;}
+
+.invisible {display: none;}
+.hidden {visibility: hidden;}

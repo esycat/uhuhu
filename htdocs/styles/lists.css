@@ -1,0 +1,86 @@
+#content ol, #content ul {
+	margin: 1em 0;
+}
+
+#content ol {padding-left: 2.5em;}
+#content ol li {margin-bottom: 1em;}
+
+
+/* Plain lists */
+#content ol.plain, #content ul.plain {
+	margin: 0;
+	padding: 0;
+}
+
+#content ul.plain li {
+	background: none;
+	list-style: none;
+}
+
+
+/* Arrowed lists */
+#content ul.arrowed {
+	margin: .4em 0;
+}
+
+#content ul.arrowed li {
+	clear: left;
+	padding-left: 20px;
+	background: url('../images/arrows/general_blue_right.png') left .25em no-repeat;
+	list-style: none;
+}
+
+#content ul.arrowed.orange li {
+	background-image: url('../images/arrows/general_orange_right.png');
+}
+
+#content ul.arrowed ul.arrowed {
+	margin: 0;
+	padding-left: 20px;
+}
+
+#content ul.arrowed ul.arrowed li {
+	padding-left: 16px;
+	background: url('../images/arrows/return_black.png') left .35em no-repeat;
+}
+
+
+/* Chevroned lists */
+#content ul.chevroned {
+	margin: 0;
+	padding: 0;
+	padding-left: 15px;
+}
+
+#content ul.chevroned li {
+	margin: 0;
+	padding: 0;
+	list-style: url('../images/arrows/chevron_small_black_right.png');
+}
+
+
+/* Small float hint-lists */
+#content ul.hint {
+	margin: 0;
+	padding: .4em;
+	font-size: 80%;
+}
+
+#content ul.hint li {
+	padding-left: 14px;
+	background: url('../images/arrows/chevron_small_white_right.png') no-repeat 3px 55%;
+	list-style: none;
+}
+
+/* Lists in forms */
+#content form ul.form {
+	margin: 1em 0;
+	padding: 0;
+}
+
+#content form ul.form li {
+	margin: 0;
+	padding: 0;
+	background: none;
+	list-style: none;
+}

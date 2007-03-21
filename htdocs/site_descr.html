@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="description" />
+  <meta name="keywords" content="keywords" />
+  <title>UHUHU</title>
+  <link type="text/css" rel="stylesheet" media="screen" href="./styles/theme.css" />
+  <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie.css" /><![endif]-->
+  <!--[if lt IE 8]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie6.css" /><![endif]-->
+  <link type="text/css" rel="stylesheet" media="print" href="./styles/print.css" />
+  <script type="text/javascript" src="./js/libs/jquery.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/common.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/site.js"></script>
+</head>
+
+<body>
+  <div id="body-wrapper">
+    <div id="auth">Пользователь: <a href="./login/">Не авторизован</a></div>
+    <div id="header">
+      <a href="/"><img src="./images/logotype.png" width="125" height="50" alt="UHUHU" id="logotype" /></a>
+      <div id="stats">У нас уже <var>20 790</var> клиентов и <var>2 000</var> каталогов.</div>
+    </div>
+    <div id="navigation">
+      <div class="strut left"><div class="rc tr"><div class="rc br"><div class="colin"></div></div></div></div>
+      <div class="strut right"><div class="rc tl"><div class="rc bl"><div class="colin"></div></div></div></div>
+      <div id="navigation-container">
+        <div id="mainmenu-container" class="rounded-corners">
+          <ul id="mainmenu">
+            <li class="first-child current"><a href="/">Главная</a></li>
+            <li><a href="">Мой UHUHU</a></li>
+            <li><a href="">О системе</a></li>
+            <li><a href="">Каталоги</a></li>
+            <li><a href="">Поддержка</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </div>
+        <ul id="submenu">
+          <li class="first-child current"><a href="">Главная</a></li>
+          <li><a href="">Регистрация</a></li>
+          <li><a href="">Вход</a></li>
+          <li><a href="">Расценки</a></li>
+          <li><a href="">Вопросы и ответы</a></li>
+        </ul>
+        <div class="cleaner"></div>
+      </div>
+    </div>
+    <div id="content">
+      <div class="header">
+        <div><div class="mark rounded-corners"></div></div>
+        <h1 class="title rounded-corners">Управление описаниями сайта <a href="http://www.oem.ru/">www.oem.ru</a></h1>
+      </div>
+      <div class="content-container">
+        <form action="" method="post">
+          <h2 class="arrowed"><span>Базовое описание</span></h2>
+
+          <fieldset>
+            <div class="field">
+              <div class="label"><label for="base_name" class="required">Название сайта:</label></div>
+              <div class="controls"><input type="text" name="base_name" value="" maxlength="255" id="base_name" class="text countable" /></div>
+              <div class="misc counter"></div>
+              <div class="description">Пояснения.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="base_description" class="required">Описание сайта:</label></div>
+              <div class="controls"><input type="text" name="base_description" value="" maxlength="255" id="base_description" class="text countable" /></div>
+              <div class="misc counter"></div>
+              <div class="description">Пояснения.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="base_full_description" class="required">Полное описание:</label></div>
+              <div class="controls"><textarea name="base_full_description" id="base_full_description" cols="30" rows="6" class="countable"></textarea></div>
+              <div class="misc counter"></div>
+              <div class="description">Пояснения.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="base_keywords" class="required">Ключевые слова:</label></div>
+              <div class="controls"><input type="text" name="base_keywords" value="" maxlength="255" id="base_keywords" class="text countable" /></div>
+              <div class="misc counter"></div>
+              <div class="description">Пояснения.</div>
+              <div class="cleaner"></div>
+            </div>
+
+            <div class="buttons">
+              <input type="image" src="./images/buttons/edit.png" alt="Редактировать" title="Редактировать" class="button" />
+              <p class="footnote"><img src="./images/asterisk.png" width="5" height="5" alt="" style="vertical-align: top;" />&nbsp;Поле обязательно для заполнения</p>
+            </div>
+          </fieldset>
+
+          <h2 class="arrowed"><span>Дополнительные описания</span></h2>
+
+          <fieldset id="descriptions">
+            <div class="descgroup">
+              <div class="field">
+                <div class="label"><label for="add_name_1" class="required">Название сайта:</label></div>
+                <div class="controls"><input type="text" name="add_name[]" value="" maxlength="255" id="add_name_1" class="text countable" /></div>
+                <div class="misc counter"></div>
+                <div class="description">
+                  <img src="./images/buttons/addmore.png" alt="Ещё" class="button" title="Ещё" onclick="sitedescr.add(this);" />
+                  <img src="./images/buttons/delete.png" alt="Удалить" class="button" title="Удалить" onclick="sitedescr.remove(this);" />
+                </div>
+                <div class="cleaner"></div>
+              </div>
+              <div class="switcher">
+                <input type="radio" name="add_data[]" id="add_data_base_1" value="0" checked="checked" class="radio" onclick="sitedescr.switchSource(this);" />
+                <label for="add_data_base_1">взять из&nbsp;базового</label>
+                <input type="radio" name="add_data[]" id="add_data_1" value="1" class="radio" onclick="sitedescr.switchSource(this);" />
+                <label for="add_data_1">ввести новое</label>
+              </div>
+              <div class="field invisible">
+                <div class="label"><label for="add_description_1" class="required">Описание сайта:</label></div>
+                <div class="controls"><input type="text" name="add_description[]" value="" maxlength="255" id="add_description_1" class="text countable" /></div>
+                <div class="misc counter"></div>
+                <div class="description"></div>
+                <div class="cleaner"></div>
+              </div>
+              <div class="field invisible">
+                <div class="label"><label for="add_full_description_1" class="required">Полное описание:</label></div>
+                <div class="controls"><textarea name="add_full_description[]" id="add_full_description_1" cols="30" rows="6" class="countable"></textarea></div>
+                <div class="misc counter"></div>
+                <div class="description"></div>
+                <div class="cleaner"></div>
+              </div>
+              <div class="field invisible">
+                <div class="label"><label for="add_keywords_1" class="required">Ключевые слова:</label></div>
+                <div class="controls"><input type="text" name="add_keywords[]" value="" maxlength="255" id="add_keywords_1" class="text countable" /></div>
+                <div class="misc counter"></div>
+                <div class="description"></div>
+                <div class="cleaner"></div>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="buttons">
+            <input type="image" src="./images/buttons/save.png" alt="Сохранить" title="Сохранить" class="button" />
+            <p class="footnote"><img src="./images/asterisk.png" width="5" height="5" alt="" style="vertical-align: top;" />&nbsp;Поле обязательно для заполнения</p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="footer-placeholder"></div>
+  </div>
+  <div id="footer">
+    <div class="colin">
+      <div id="counters"><a href="http://top100.rambler.ru/top100/"><img src="./images/banners/rambler.png" width="88" height="31" alt="Rambler's Top100" /></a></div>
+      <div id="sitenav">
+        <a href=""><img src="./images/sitemap.png" width="24" height="21" alt="Карта сайта" title="Карта сайта" /></a>
+        <a href=""><img src="./images/email.png" width="24" height="21" alt="Написать письмо" title="Написать письмо" /></a>
+      </div>
+      <div id="copyright">&copy;&nbsp;2005&ndash;2007, система регистрации в каталогах <a href="/">UHUHU</a>.</div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+div.ddarkblue, h1.ddarkblue, h3.ddarkblue {
+	background-color: #18466d !important;
+	color: white !important;
+}
+
+div.darkblue, h1.darkblue, h3.darkblue {
+	background-color: #205c8f !important;
+	color: white !important;
+}
+
+div.skyblue, h1.skyblue, h3.skyblue {
+	background-color: #4c94d3 !important;
+	color: white !important;
+}
+
+div.orange, h1.orange, h3.orange {
+	background-color: #f99f20 !important;
+	color: white !important;
+}
+
+/* Rounded corners */
+div.rc-container {
+	margin: 0 !importnat;
+	padding: 0 !importnat;
+}
+
+div.rc {
+	background-image: url('../images/corner.png');
+	background-repeat: no-repeat;
+}
+div.rc.tl {background-position: top left !important;}
+div.rc.tr {background-position: top right !important;}
+div.rc.br {background-position: bottom right !important;}
+div.rc.bl {background-position: bottom left !important;}
+
+
+/* Page headers */
+#content div.header .mark {
+	position: absolute;
+	background: #72b2ef url('../images/header_mark.png') center no-repeat;
+}
+
+#content div.header .mark .colin {
+	width: 40px;
+	height: 1.3em;
+	padding: .3em 0;
+}
+
+#content div.header .title {
+	margin: 0 0 0 42px;
+	padding: 0;
+	background-color: #ebebeb;
+	color: black;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+#content div.header .title .colin {
+	width: auto;
+	height: 1.3em;
+	padding: .3em 1.2em;
+}
+
+#content div.header .title a {text-decoration: none !important;}
+
+/* Pagination */
+#content .pagination {
+	border-top: 1px dashed #d0d0d0;
+	padding: .2em;
+	text-align: right;
+}
+#content .pagination a {text-decoration: none !important;}
+#content .pagination a.current {
+	background-color: #72b2ef;
+	color: white;
+}
+
+/* Subsidiary information block */
+#content div.info {
+	width: 100%;
+	margin: 1em auto;
+	background: #ebebeb;
+}
+
+#content div.info div.column {
+	float: left;
+	margin-left: 5%;
+}
+
+#content div.info .colin {
+	padding: .4em .6em;
+}
+
+/* Progressbar */
+#content .progressbar {
+	width: 96%;
+	border: 1px solid black;
+	margin: .2em auto;
+	padding: 1px;
+	background-color: white;
+}
+
+#content .progressbar.complete {
+	border: none;
+	padding: 2px;
+	background: none;
+}
+
+#content .progressbar .metre {
+	width: 0;
+	height: 13px;
+	background-color: #f99f20;
+}
+
+#content .progressbar.complete .metre {display: none;}
+
+#content .progressbar .message {
+	display: none;
+	text-align: center;
+}
+
+#content .progressbar.complete .message {display: block;}
+
+
+/* Messages (Support) */
+.message h3 {
+	margin: .4em 0;
+}
+
+.message .orig {
+	border-top: 1px dashed #d0d0d0;
+	margin-top: 10px;
+	padding: 5px 0;
+	color: #18466d;
+}

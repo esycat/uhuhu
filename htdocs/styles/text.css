@@ -1,0 +1,97 @@
+body {
+	color: black;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-size: 12px;
+}
+
+h1 {
+	font-size: 200%;
+	font-weight: normal;
+}
+
+h1.errorheader .errorcode {font-size: 300%;}
+
+h2 {
+	margin: 1.2em 0 .8em 0;
+	color: #18466d;
+	font-size: 100%;
+}
+
+h2.arrowed span {
+	padding-right: 16px;
+	background: url('../images/arrows/general_orange_down.png') no-repeat right bottom;
+}
+
+h3 {
+	margin: .3em 0;
+	padding-top: .25em;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+h3.hr {
+	border-top: 1px dashed #d0d0d0;
+}
+
+h4 {
+	margin-top: 1em;
+	margin-bottom: .2em;
+	padding-left: 10px;
+	background: url('../images/arrows/chevron_small_black_right.png') no-repeat 0 .35em;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+a:link {color: #18466d;}
+a:visited {color: #18466d;}
+
+a.details {
+	display: block;
+	float: right;
+	clear: right;
+	padding: .5em 0;
+	text-align: right;
+}
+
+a.username {
+	font-weight: bold;
+}
+
+#content p {
+	margin: .8em 0;
+}
+
+#content p.text {
+	margin: 0;
+	text-align: justify;
+}
+
+small, p.footnote {font-size: 85%;}
+p.footnote {margin: .2em 0;}
+small.footnote {font-weight: normal;}
+
+var {
+	font-style: normal;
+	font-weight: bold;
+}
+
+#stats {
+	color: #205c8f;
+	font-weight: bold;
+}
+
+#stats var {color: #4c94d3;}
+
+#inbox a {color: black !important;}
+
+#content .rank {
+	font-size: 80%;
+	text-align: right;
+	vertical-align: super;
+	white-space: nowrap;
+}
+
+#content ul.hint var {
+	font-style: normal;
+	text-decoration: underline;
+}

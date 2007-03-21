@@ -1,0 +1,15 @@
+@import url('./text.css');
+@import url('./images.css');
+@import url('./lists.css');
+@import url('./tables.css');
+
+#auth, #inbox, #stats, #navigation, #counters, #sitenav,
+#sitelist,
+#content .infoblock .header .mark,
+h2 img.icon, h3 img.icon,
+.non-printable
+{display: none;}
+
+#logotype, #copyright {
+	margin: 1em 0;
+}

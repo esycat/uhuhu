@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="description" />
+  <meta name="keywords" content="keywords" />
+  <title>UHUHU</title>
+  <link type="text/css" rel="stylesheet" media="screen" href="./styles/theme.css" />
+  <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie.css" /><![endif]-->
+  <!--[if lt IE 7]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie6.css" /><![endif]-->
+  <link type="text/css" rel="stylesheet" media="print" href="./styles/print.css" />
+  <script type="text/javascript" src="./js/libs/jquery.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/common.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/forms/validation.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/forms/validation.registration.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/forms/validation.addsite.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/forms/validation.join.js"></script>
+  <script type="text/javascript">
+  // <![CDATA[
+    $(document).ready(function() {
+      if ($('#addsite_now').get(0).checked) $('#addsiteform').show();
+
+      var formValidation = new JoinFormValidation();
+      formValidation.init();
+    });
+  // ]]>
+  </script>
+</head>
+
+<body>
+  <div id="body-wrapper">
+    <div id="auth">Пользователь: <a href="./login/">Не авторизован</a></div>
+    <div id="header">
+      <a href="/"><img src="./images/logotype.png" width="125" height="50" alt="UHUHU" id="logotype" /></a>
+      <div id="stats">У нас уже <var>20 790</var> клиентов и <var>2 000</var> каталогов.</div>
+    </div>
+    <div id="navigation">
+      <div class="strut left"><div class="rc tr"><div class="rc br"><div class="colin"></div></div></div></div>
+      <div class="strut right"><div class="rc tl"><div class="rc bl"><div class="colin"></div></div></div></div>
+      <div id="navigation-container">
+        <div id="mainmenu-container" class="rounded-corners">
+          <ul id="mainmenu">
+            <li class="first-child current"><a href="/">Главная</a></li>
+            <li><a href="">Мой UHUHU</a></li>
+            <li><a href="">О системе</a></li>
+            <li><a href="">Каталоги</a></li>
+            <li><a href="">Поддержка</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </div>
+        <ul id="submenu">
+          <li class="first-child current"><a href="">Главная</a></li>
+          <li><a href="">Регистрация</a></li>
+          <li><a href="">Вход</a></li>
+          <li><a href="">Расценки</a></li>
+          <li><a href="">Вопросы и ответы</a></li>
+        </ul>
+        <div class="cleaner"></div>
+      </div>
+    </div>
+    <div id="content">
+      <div class="header">
+        <div><div class="mark rounded-corners"></div></div>
+        <h1 class="title rounded-corners">Регистрация в сервисе</h1>
+      </div>
+      <div class="content-container">
+        <!--
+          Данная форма является объединением полей из формы регистрации
+          на главной странице и из формы добавления сайта.
+          Соответственно, эти наборы полей просто обязаны быть вынесены
+          в отдельные шаблоны и подключаться.
+        -->
+        <form action="" method="post" id="join">
+          <h2 class="arrowed"><span>Персональные данные</span></h2>
+
+          <fieldset>
+            <div class="field">
+              <div class="label"><label for="name" class="required">Имя:</label></div>
+              <div class="controls"><input type="text" name="user_fullname" value="" maxlength="255" id="name" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description"></div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="email" class="required">E-mail:</label></div>
+              <div class="controls"><input type="text" name="user_email" value="" maxlength="255" id="email" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description">Укажите e-mail, на который будут приходит отчёты и данные о платежах.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="username" class="required">Логин:</label></div>
+              <div class="controls"><input type="text" name="user_login" value="" maxlength="12" id="username" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description">Не более 16 символов из латинских букв, цифр, знаков подчеркивания ‘_’ и дефисоф ‘-’.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="password" class="required">Пароль:</label></div>
+              <div class="controls"><input type="password" name="user_password" value="" maxlength="16" id="password" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description">6-16 символов из латинских букв и цифр. Не используйте слишком простой пароль!</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="password_repeat" class="required">Снова пароль:</label></div>
+              <div class="controls"><input type="password" name="user_repeatpassword" value="" maxlength="16" id="password_repeat" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description">Продублируйте введеный ранее пароль. Это позволит избежать случайных опечаток.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="promokey">Промо-код:<br /><small class="footnote">/если есть/</small></label></div>
+              <div class="controls"><input type="text" name="user_promokey" value="" maxlength="255" id="promokey" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description"></div>
+              <div class="cleaner"></div>
+            </div>
+
+            <ul class="plain switcher">
+              <li>
+                <input type="radio" name="addsite" value="later" checked="checked" id="addsite_later" class="radio" onclick="$('#addsiteform').hide();" />
+                <label for="addsite_later">Я добавлю сайт позже</label>
+              </li>
+              <li>
+                <input type="radio" name="addsite" value="now" id="addsite_now" class="radio" onclick="$('#addsiteform').show();" />
+                <label for="addsite_now">Я хочу сразу добавить сайт (необязательно)</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset id="addsiteform" class="invisible">
+            <h2 class="arrowed"><span>Данные о вашем сайте</span></h2>
+
+            <div class="field">
+              <div class="label"><label for="site_url" class="required">URL вашего сайта:</label></div>
+              <div class="controls"><input type="text" name="site_url" value="" maxlength="255" id="site_url" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description">URL&nbsp;должен начинаться с&nbsp;<code>http://</code></div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="site_title" class="required">Название сайта:</label></div>
+              <div class="controls"><input type="text" name="site_title" value="" maxlength="150" id="site_title" class="text countable" /></div>
+              <div class="misc counter"></div>
+              <div class="description">Данный текст станет ссылкой на&nbsp;этот сайт. Во&nbsp;избежание удаления сайта как спам, используйте только осмысленный текст, а&nbsp;не&nbsp;набор ключевых слов. Длинна названия должна составлять 100-150&nbsp;символов.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="site_desc" class="required">Описание сайта:</label></div>
+              <div class="controls"><input type="text" name="site_desc" value="" maxlength="250" id="site_desc" class="text countable" /></div>
+              <div class="misc counter"></div>
+              <div class="description">Краткое описание сайта. Длинна описания должна составлять 150-250 символов.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="site_fulldesc" class="required">Полное описание:</label></div>
+              <div class="controls"><textarea name="site_fulldesc" id="site_fulldesc" cols="30" rows="6" class="countable"></textarea></div>
+              <div class="misc counter"></div>
+              <div class="description">Полное описание сайта. Длинна описания должна составлять более 250 символов.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="site_keywords" class="required">Ключевые слова:</label></div>
+              <div class="controls"><input type="text" name="site_keywords" value="" maxlength="250" id="site_keywords" class="text countable" /></div>
+              <div class="misc counter"></div>
+              <div class="description">Список ключевых слов, которые характеризуют ваш сайт. Слова необходимо перечислять через запятую. Длинна текста должна составлять от 100 до 250 символов.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="site_author" class="required">Имя владельца:</label></div>
+              <div class="controls"><input type="text" name="site_author" value="" maxlength="255" id="site_author" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description">Имя, которое будет указано при регистрации сайта в каталогах, как имя владельца сайта.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="site_email" class="required">E-mail:</label></div>
+              <div class="controls"><input type="text" name="site_email" value="" maxlength="255" id="site_email" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description">Данный e-mail будет указывать при регистрации в каталогах. Обратите внимание! На этот адрес будет приходить много спама. Поэтому мы не рекомендуем использовать личные/рабочие ящики.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="site_username" class="required">Логин:</label></div>
+              <div class="controls"><input type="text" name="site_login" value="" maxlength="255" id="site_username" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description">Будет указываться при регистрации в каталогах. Позволит в дальнейшем управлять данными вашего сайта в каталогах. Совпадени с логином в системе не обязательно.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="site_password" class="required">Пароль:</label></div>
+              <div class="controls"><input type="password" name="site_password" value="" maxlength="255" id="site_password" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description">Будет указываться при регистрации в каталогах. Позволит в дальнейшем управлять данными вашего сайта в каталогах. Совпадени с логином в системе не обязательно.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="site_city" class="required">Город:</label></div>
+              <div class="controls"><input type="text" name="site_city" value="" maxlength="255" id="site_city" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description">Некоторые каталоги при регистрации просят указывать адрес, телефон организации или человека, который является владельцем сайта. Потому данное поле обязательно нужно заполнить. Допускается заполнение вида '1111111'.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="site_phone" class="required">Телефон:</label></div>
+              <div class="controls"><input type="text" name="site_phone" value="" maxlength="255" id="site_phone" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description">Некоторые каталоги при регистрации просят указывать адрес, телефон организации или человека, который является владельцем сайта. Потому данное поле обязательно нужно заполнить. Допускается заполнение вида '1111111'.</div>
+              <div class="cleaner"></div>
+            </div>
+            <div class="field">
+              <div class="label"><label for="site_backurl">URL страницы для обратных ссылок:</label></div>
+              <div class="controls"><input type="text" name="site_backurl" value="" maxlength="255" id="site_backurl" class="text" /></div>
+              <div class="misc status"></div>
+              <div class="description">Страница, на которой вы будете размещать обратные ссылки на каталоги (необязательно). Мы рекомендуем не размещать эти ссылки.<br /><strong>Внимание!</strong> Многие каталоги требуют ввода этой страницы, даже если на ней нет ссылки на них. Поэтому мы всё же рекомендуем туда написать <code>http://www.вашсайт.ru/link.html</code>.</div>
+              <div class="cleaner"></div>
+            </div>
+          </fieldset>
+
+          <div class="buttons">
+            <input type="image" src="./images/buttons/register.png" alt="Зарегистрироваться" title="Зарегистрироваться" class="button" style="float: right;" />
+            <p class="footnote"><img src="./images/asterisk.png" width="5" height="5" alt="*" style="vertical-align: top;" />&nbsp;Поле обязательно для заполнения</p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="footer-placeholder"></div>
+  </div>
+  <div id="footer">
+    <div class="colin">
+      <div id="counters"><a href="http://top100.rambler.ru/top100/"><img src="./images/banners/rambler.png" width="88" height="31" alt="Rambler's Top100" /></a></div>
+      <div id="sitenav">
+        <a href=""><img src="./images/sitemap.png" width="24" height="21" alt="Карта сайта" title="Карта сайта" /></a>
+        <a href=""><img src="./images/email.png" width="24" height="21" alt="Написать письмо" title="Написать письмо" /></a>
+      </div>
+      <div id="copyright">&copy;&nbsp;2005&ndash;2007, система регистрации в каталогах <a href="/">UHUHU</a>.</div>
+    </div>
+  </div>
+</body>
+
+</html>

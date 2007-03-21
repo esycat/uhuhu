@@ -1,0 +1,55 @@
+#content #catlist {
+	margin: 0;
+	padding: 0;
+}
+
+#catlist li {
+	border-top: 1px dashed #d0d0d0;
+	margin: 0 !important;
+	padding: .4em;
+	list-style: none;
+}
+
+#catlist li:first-child,
+#catlist li.first-child {
+	border-top: none;
+}
+
+#catlist li .title {
+	position: relative;
+	padding: 0 10px;
+	background: no-repeat left 3px;
+}
+
+#catlist li.odd .title {
+	background-image: url('../images/arrows/chevron_blue_right.png');
+}
+
+#catlist li.even .title {
+	background-image: url('../images/arrows/chevron_orange_right.png');
+}
+
+#catlist .rank {
+	float: right;
+	padding-left: 10px;
+}
+
+#sitelist fieldset {
+	margin: 0;
+	padding: 0 10px;
+}
+
+#sitelist label {
+	display: block;
+	padding: 8px 0;
+	font-weight: bold;
+}
+
+#sitelist input#catquery {
+	width: 170px;
+}
+
+#sitelist input.button {
+	margin: 0;
+	vertical-align: top;
+}

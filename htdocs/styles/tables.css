@@ -1,0 +1,96 @@
+#content table tr.odd {}
+#content table tr.even {
+	background-color: #ebebeb;
+}
+
+#content table.plain {border-collapse: collapse;}
+#content table.plain td {padding: 0;}
+
+
+/* Common data table */
+#content div.datatable .colin {padding: 0 1px;}
+
+#content table.data {
+	width: 100%;
+	border-bottom: 1px solid #205c8f;
+	border-collapse: collapse;
+	background-color: white;
+	color: black;
+}
+
+#content table.data th,
+#content table.data td {
+	padding: 0;
+}
+
+#content table.data thead {
+	background-color: #205c8f;
+	color: white;
+}
+
+#content table.data th .colin {
+	padding: .3em 1.2em;
+	line-height: 1.4em;
+}
+
+#content table.data tbody th .colin {
+	background-color: #ebebeb;
+	color: black;
+	text-align: left;
+}
+
+#content table.data .left-side {padding-left: 4px;}
+#content table.data .right-side {padding-right: 4px;}
+
+#content table.data tr.first-child .colin {border: none !important;}
+
+#content table.data td .colin {
+	border-color: #205c8f;
+	border-style: solid;
+	border-width: 0;
+	border-top-width: 1px;
+	margin-bottom: 1px;
+	padding: 3px 15px;
+}
+
+
+/* Common table cells */
+#content table td.icon {
+	width: 30px;
+	text-align: center;
+}
+
+#content table td.title {
+	width: 100%;
+}
+
+#content table td.date {
+	width: 20%;
+	text-align: right;
+	white-space: nowrap;
+}
+
+
+/* Message table */
+#content table.messages {
+	border-collapse: collapse;
+}
+
+#content table.messages td {
+	padding: .2em .4em;
+}
+
+#content table.messages td.pointer {
+	width: 30px;
+}
+
+#content table.messages td.pointer input {margin: 0;}
+
+#content table.messages tr.selected td.pointer {}
+
+#content table.messages td.icon {padding: 0;}
+#content table.messages td.icon img.icon {display: block;}
+
+#content table.messages tr.selected td.title {
+	font-weight: bold;
+}
