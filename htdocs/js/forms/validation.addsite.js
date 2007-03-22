@@ -4,11 +4,11 @@ function AddsiteFormValidation(formId) {
 	formId = formId || 'addsite';
 
 	var form = document.getElementById(formId);
-    if (!form) return;
+		if (!form) return;
 
 	FormValidation.call(this, form);
 
-	this.form.elements['site_url'].vregexp = this.isURL;
+	this.form.elements['site_url'].vregexp = this.regexps.URL;
 	this.form.elements['site_url'].vmsg = {
 		empty: "Введите URL вашего сайта.",
 		incorrect: "Введите корректный URL вашего сайта."
@@ -44,13 +44,13 @@ function AddsiteFormValidation(formId) {
 		minLength: "Имя должно быть не менее 2-х символов."
 	};
 
-	this.form.elements['site_email'].vregexp = this.isEmail;
+	this.form.elements['site_email'].vregexp = this.regexps.email;
 	this.form.elements['site_email'].vmsg = {
 		empty: "Введите адрес электронной почты.",
 		incorrect: "Введите корректный адрес электронной почты."
 	};
 
-	this.form.elements['site_username'].vregexp = this.isAlnum;
+	this.form.elements['site_username'].vregexp = this.regexps.alnum;
 	this.form.elements['site_username'].minLength = 4;
 	this.form.elements['site_username'].vmsg = {
 		empty: "Введите логин.",
@@ -58,7 +58,7 @@ function AddsiteFormValidation(formId) {
 		incorrect: "Логин может состоять только из латинских букв и цифр."
 	};
 
-	this.form.elements['site_password'].vregexp = this.isAlnum;
+	this.form.elements['site_password'].vregexp = this.regexps.alnum;
 	this.form.elements['site_password'].minLength = 6;
 	this.form.elements['site_password'].vmsg = {
 		empty: "Введите пароль.",

@@ -1,27 +1,20 @@
 /**
  * http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:indexOf
  */
-if (!Array.prototype.indexOf)
-{
-  Array.prototype.indexOf = function(elt /*, from*/)
-  {
-    var len = this.length;
+if (!Array.prototype.indexOf) {
+	Array.prototype.indexOf = function(elt /*, from*/) {
+		var len = this.length;
 
-    var from = Number(arguments[1]) || 0;
-    from = (from < 0)
-         ? Math.ceil(from)
-         : Math.floor(from);
-    if (from < 0)
-      from += len;
+		var from = Number(arguments[1]) || 0;
+		from = (from < 0) ? Math.ceil(from) : Math.floor(from);
+		if (from < 0) from += len;
 
-    for (; from < len; from++)
-    {
-      if (from in this &&
-          this[from] === elt)
-        return from;
-    }
-    return -1;
-  };
+		for (; from < len; from++) {
+			if (from in this && this[from] === elt) return from;
+		}
+
+		return -1;
+	};
 }
 
 /**
@@ -56,14 +49,14 @@ Function.prototype.inherit = function(parent) {
  * @return Object window
  */
 function openPopup(location, name, width, height, left, top) {
-  width = width || 640;
-  height = height || 480;
-  left = left || (screen.width - width) / 2;
-  top = top || (screen.height - height) / 2
+	width = width || 640;
+	height = height || 480;
+	left = left || (screen.width - width) / 2;
+	top = top || (screen.height - height) / 2
 
-  var features = "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top + ",alwaysRaised=yes,dependent=yes";
+	var features = "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top + ",alwaysRaised=yes,dependent=yes";
 
-  return window.open(location, name, features);
+	return window.open(location, name, features);
 }
 
 /**

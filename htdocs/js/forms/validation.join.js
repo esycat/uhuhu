@@ -4,7 +4,7 @@ function JoinFormValidation(formId) {
 	formId = formId || 'join';
 
 	var form = document.getElementById(formId);
-    if (!form) return;
+		if (!form) return;
 
 	FormValidation.call(this, form);
 

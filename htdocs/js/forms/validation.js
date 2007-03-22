@@ -3,13 +3,18 @@ function FormValidation(form) {
 	this.correctClassName = 'correct';
 	this.messageClassName = 'message';
 
-	this.isProtocol = 'https?';
-    this.isDomain = '(([0-9a-z])(([0-9a-z\-]*)?[0-9a-z])?\.)+([a-z]{2,})';
-    this.isUsername = '[0-9a-z]([0-9a-z\-.]*[0-9a-z])?';
+	this.patterns = {
+		protocol: 'https?',
+		domain: '(([0-9a-z])(([0-9a-z\-]*)?[0-9a-z])?\.)+([a-z]{2,})',
+		username: '[0-9a-z]([0-9a-z\-.]*[0-9a-z])?'
+	}
 
-	this.isAlnum = new RegExp('^[0-9a-z]+$', 'i');
-	this.isEmail = new RegExp('^(' + this.isUsername + ')@(' + this.isDomain + ')$', 'i');
-	this.isURL = new RegExp('^' + this.isProtocol + '://(' + this.isDomain + ')/(.*?)$', 'i');
+	this.regexps = {
+		alnum: new RegExp('^[0-9a-z]+$', 'i'),
+		email: new RegExp('^(' + this.patterns.username + ')@(' + this.patterns.domain + ')$', 'i'),
+		//URL: new RegExp('^' + this.patterns.protocol + '://(' + this.patterns.domain + ')/(.*?)$', 'i')
+		URL: new RegExp('^' + this.patterns.protocol + '://(' + this.patterns.domain + ')(.*?)$', 'i')
+	}
 
 	this.form = form;
 	if (this.form && this.validate) this.form.validate = this.validate;

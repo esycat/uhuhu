@@ -4,7 +4,7 @@ function RegistrationFormValidation(formId) {
 	formId = formId || 'registration';
 
 	var form = document.getElementById(formId);
-    if (!form) return;
+	if (!form) return;
 
 	FormValidation.call(this, form);
 
@@ -16,13 +16,13 @@ function RegistrationFormValidation(formId) {
 		minLength: "Имя должно быть не менее 2-х символов."
 	};
 
-	this.form.elements['email'].vregexp = this.isEmail;
+	this.form.elements['email'].vregexp = this.regexps.email;
 	this.form.elements['email'].vmsg = {
 		empty: "Введите адрес электронной почты.",
 		incorrect: "Введите корректный адрес электронной почты."
 	};
 
-	this.form.elements['username'].vregexp = this.isAlnum;
+	this.form.elements['username'].vregexp = this.regexps.alnum;
 	this.form.elements['username'].minLength = 4;
 	this.form.elements['username'].vmsg = {
 		empty: "Введите логин.",
@@ -31,7 +31,7 @@ function RegistrationFormValidation(formId) {
 		notavailable: "Данное имя пользователя уже зарегистрировано. Пожалуйста, выберите другое."
 	};
 
-	this.form.elements['password'].vregexp = this.isAlnum;
+	this.form.elements['password'].vregexp = this.regexps.alnum;
 	this.form.elements['password'].minLength = 6;
 	this.form.elements['password'].vmsg = {
 		empty: "Введите пароль.",
