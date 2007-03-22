@@ -66,13 +66,13 @@ body > #body-wrapper {
 body.home #content-first,
 body.home #content-second {
 	clear: both;
-	margin: 5px 10px;
-	padding: 10px 32px;
+	margin: 15px 42px;
 }
 
 .content-container {
 	position: relative;
-	margin: 10px 0 10px 42px;
+	z-index: 5;
+	padding: 10px 0 10px 42px;
 }
 
 #sidebar {

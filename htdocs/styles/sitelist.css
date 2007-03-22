@@ -1,13 +1,10 @@
-#content {
-	margin: 15px 42px;
-	padding: 0;
-}
-
 .content-container {
-	margin-right: 265px;
+	padding-right: 265px;
 }
 
-#sitelist {margin-bottom: 1em;}
+#sitelist {
+	margin-bottom: 1em;
+}
 
 #sitelist h3 {
 	margin: 0;

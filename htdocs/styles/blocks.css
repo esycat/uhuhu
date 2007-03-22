@@ -77,7 +77,6 @@ div.rc.bl {background-position: bottom left !important;}
 
 /* Subsidiary information block */
 #content div.info {
-	width: 100%;
 	margin: 1em auto;
 	background: #ebebeb;
 }
