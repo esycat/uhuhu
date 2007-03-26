@@ -6,6 +6,8 @@
  *
  * debugURL -- URL of a script, which returns debug forms
  * progressUpdateURL -- URL of a script, which returns updates of the progress
+ *
+ * @param String formId -- optional site registration form's ID
  */
 function Sitereg(formId) {
 	formId = formId || 'debug';
@@ -28,6 +30,12 @@ function Sitereg(formId) {
 	}
 }
 
+/**
+ * Updates site registration form
+ *
+ * @param Object context -- observable subject
+ * @return void;
+ */
 Sitereg.prototype.update = function(context) {
 	var data = this.progressBar.data;
 
@@ -41,6 +49,9 @@ Sitereg.prototype.update = function(context) {
 	else $('#reg-errors-showhide').addClass('invisible');
 }
 
+/**
+ * Switches visibility of debug form  
+ */
 Sitereg.prototype.switchDebugForm = function() {
 	$(this.form).toggleClass('invisible');
 	$('#reg-errors-show').toggleClass('invisible');
@@ -56,8 +67,19 @@ Sitereg.prototype.siteFail = function() {
 	this.updateForm(false);
 }
 
+/**
+ * Updates catalogue debug form
+ *
+ * @access protected
+ * @param Boolean status -- user's input status
+ * @return void
+ */
 Sitereg.prototype.updateForm = function(status) {
 	var data = $(this.form).find('input[@type="hidden"]').serialize();
+
+	var category = document.getElementById('catalog_category');
+	if (category) data += '&category_id=' + category.value;
+
 	if (!isNaN(status)) data += '&status=' + status;
 
 	var self = this;

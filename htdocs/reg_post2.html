@@ -9,11 +9,10 @@
   <link type="text/css" rel="stylesheet" media="screen" href="./styles/theme.css" />
   <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie.css" /><![endif]-->
   <!--[if lt IE 7]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie6.css" /><![endif]-->
-  <link type="text/css" rel="stylesheet" media="screen" href="./styles/sitelist.css" />
-  <link type="text/css" rel="stylesheet" media="screen" href="./styles/catlist.css" />
   <link type="text/css" rel="stylesheet" media="print" href="./styles/print.css" />
   <script type="text/javascript" src="./js/libs/jquery.js"></script>
   <script charset="utf-8" type="text/javascript" src="./js/common.js"></script>
+  <script charset="utf-8" type="text/javascript" src="./js/sitereg.js"></script>
 </head>
 
 <body>
@@ -50,70 +49,57 @@
     <div id="content">
       <div class="header">
         <div><div class="mark rounded-corners"></div></div>
-        <h1 class="title rounded-corners">Список каталогов в сервисе</h1>
-      </div>
-      <div id="sidebar">
-        <div id="sitelist">
-          <h3 class="rounded-corners">Поиск каталогов:</h3>
-          <form action="" method="get">
-            <fieldset>
-              <label for="searchcats">URL каталога:</label>
-              <input type="text" name="catquery" value="" id="catquery" />
-              <input type="image" src="./images/buttons/search.png" class="button" />
-            </fieldset>
-          </form>
-        </div>
-        <div class="orange rounded-corners">
-          <ul class="hint">
-            <li>Всего в&nbsp;сервисе <var>2040</var> каталогов</li>
-            <li>За&nbsp;неделю добавлено <var>102</var> каталога</li>
-          </ul>
-        </div>
+        <h1 class="title rounded-corners">Подача заявок на регистрацию в каталогах для сайта <a href="">www.oem.ru</a></h1>
       </div>
       <div class="content-container">
-        <ol id="catlist">
-          <li class="odd first-child">
-            <div class="rank">тИЦ: 2010; PR: 10</div>
-            <div class="title">Каталог: <a href="http://www.ru/">www.ru</a></div>
-            <div class="theme">Тематика: Общие</div>
-          </li>
-          <li class="even">
-            <div class="rank">тИЦ: 2010; PR: 10</div>
-            <div class="title">Каталог: <a href="http://www.ru/">www.ru</a></div>
-            <div class="theme">Тематика: Общие</div>
-          </li>
-          <li class="odd">
-            <div class="rank">тИЦ: 2010; PR: 10</div>
-            <div class="title">Каталог: <a href="http://www.ru/">www.ru</a></div>
-            <div class="theme">Тематика: Общие</div>
-          </li>
-          <li class="even">
-            <div class="rank">тИЦ: 2010; PR: 10</div>
-            <div class="title">Каталог: <a href="http://www.ru/">www.ru</a></div>
-            <div class="theme">Тематика: Общие</div>
-          </li>
-          <li class="odd">
-            <div class="rank">тИЦ: 2010; PR: 10</div>
-            <div class="title">Каталог: <a href="http://www.ru/">www.ru</a></div>
-            <div class="theme">Тематика: Общие</div>
-          </li>
-          <li class="even">
-            <div class="rank">тИЦ: 2010; PR: 10</div>
-            <div class="title">Каталог: <a href="http://www.ru/">www.ru</a></div>
-            <div class="theme">Тематика: Общие</div>
-          </li>
-          <li class="odd">
-            <div class="rank">тИЦ: 2010; PR: 10</div>
-            <div class="title">Каталог: <a href="http://www.ru/">www.ru</a></div>
-            <div class="theme">Тематика: Общие</div>
-          </li>
-        </ol>
-        <div class="pagination">
-          страницы:
-          <a href="">1</a>
-          <a href="">2</a>
-          <a href="" class="current">3</a>
-        </div>
+        <form action="" method="post" id="debug" class="brief" target="_blank">
+          <h4>Просмотр и&nbsp;тестирование ошибок</h4>
+          <p>Пожалуйста убедитесь в&nbsp;корректности автозаполнения полей и&nbsp;нажмите кнопку &laquo;отправить&raquo;.</p>
+
+          <div id="reg-form">
+            <div>
+              <div class="catalog">
+                <div>Каталог: <a href="">http://www.ru/</a> <span class="rank">тИЦ: 1000; PR: 10</span></div>
+                <div>Тематика: Общие</div>
+              </div>
+            
+              <fieldset>
+                <input type="hidden" name="form_action" value="http://www.domain.tld/" />
+                <input type="hidden" name="form_method" value="get" />
+                <input type="hidden" name="catalogue_id" value="2" />
+                <div class="field">
+                  <div class="label"><label for="catalog_category">Категория:</label></div>
+                  <div class="controls">
+                    <select name="catalog_category" id="catalog_category" class="ddarkblue">
+                      <option>Не указана</option>
+                      <option value="1">Категория 1</option>
+                    </select>
+                  </div>
+                  <div class="cleaner"></div>
+                </div>
+                <div class="field">
+                  <div class="label"><label for="catalog_field1">Поле 1:</label></div>
+                  <div class="controls"><input type="text" name="catalog_field1" id="catalog_field1" class="text" /></div>
+                  <div class="cleaner"></div>
+                </div>
+                <div class="field">
+                  <div class="label"><label for="catalog_field2">Поле 2:</label></div>
+                  <div class="controls"><textarea name="catalog_field2" cols="60" rows="8" id="catalog_field2"></textarea></div>
+                  <div class="cleaner"></div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div id="reg-form-loading" class="info rounded-corners invisible">Пожалуйста, подождите, идёт загрузка&hellip;</div>
+
+          <div class="buttons">
+            <input type="hidden" name="site_id" value="1" />
+            <div style="float: left; height: 19px; margin-right: 10px; padding-right: 10px; border-right: 1px dotted black;"><input type="image" src="./images/buttons/send.png" alt="Отправить" title="Отправить" /></div>
+            <img src="./images/buttons/register-success.png" width="168" height="19" alt="регистрация прошла успешно" class="button" onclick="sitereg.siteSuccess();" />
+            <img src="./images/buttons/register-fail.png" width="116" height="19" alt="каталог не работает" class="button" onclick="sitereg.siteFail();" />
+          </div>
+        </form>
       </div>
     </div>
     <div id="footer-placeholder"></div>
