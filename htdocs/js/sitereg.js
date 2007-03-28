@@ -28,6 +28,8 @@ function Sitereg(formId) {
 		this.notrespond = $('#reg-notrespond');
 		this.errors     = $('#reg-errors');
 	}
+
+	if (!$(this.form).is('.invisible')) this.sendUpdate();
 }
 
 /**
@@ -49,32 +51,32 @@ Sitereg.prototype.update = function(context) {
 	else $('#reg-errors-showhide').addClass('invisible');
 }
 
-/**
- * Switches visibility of debug form  
- */
-Sitereg.prototype.switchDebugForm = function() {
-	$(this.form).toggleClass('invisible');
-	$('#reg-errors-show').toggleClass('invisible');
-	$('#reg-errors-hide').toggleClass('invisible');
-	this.updateForm();
-}
-
 Sitereg.prototype.siteSuccess = function() {
-	this.updateForm(true);
+	this.sendUpdate(true);
 }
 
 Sitereg.prototype.siteFail = function() {
-	this.updateForm(false);
+	this.sendUpdate(false);
 }
 
 /**
- * Updates catalogue debug form
+ * Toggles visibility of the debug form  
+ */
+Sitereg.prototype.toggleForm = function() {
+	$(this.form).toggleClass('invisible');
+	$('#reg-errors-show').toggleClass('invisible');
+	$('#reg-errors-hide').toggleClass('invisible');
+	this.sendUpdate();
+}
+
+/**
+ * Sends catalogue debug form's data
  *
  * @access protected
  * @param Boolean status -- user's input status
  * @return void
  */
-Sitereg.prototype.updateForm = function(status) {
+Sitereg.prototype.sendUpdate = function(status) {
 	var data = $(this.form).find('input[@type="hidden"]').serialize();
 
 	var category = document.getElementById('catalog_category');
@@ -88,7 +90,7 @@ Sitereg.prototype.updateForm = function(status) {
 		url: this.debugURL,
 		data: data,
 		success: function(form) {
-			self.updateForm2(form);
+			self.updateForm(form);
 		}
 	});
 
@@ -96,9 +98,9 @@ Sitereg.prototype.updateForm = function(status) {
 }
 
 
-Sitereg.prototype.updateForm2 = function(fields) {
+Sitereg.prototype.updateForm = function(form) {
 	$(this.form).find('#reg-form-loading').hide();
-	$(this.form).find('#reg-form').empty().append(fields);
+	$(this.form).find('#reg-form').empty().append(form);
 	this.form.action = this.form.elements['form_action'].value;
 	this.form.method = this.form.elements['form_method'].value;
 }
@@ -106,5 +108,5 @@ Sitereg.prototype.updateForm2 = function(fields) {
 var sitereg;
 
 $(document).ready(function() {
-	sitereg = new Sitereg;
+	sitereg = new Sitereg();
 });
