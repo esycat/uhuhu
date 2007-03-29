@@ -12,11 +12,21 @@ function ProgressBar(id, requestURL, delay) {
 
 ProgressBar.prototype.getData = function() {
 	var self = this;
+	var delay = this.data.delay ? this.data.delay : this.delay
+
+	$.ajaxSetup({
+		timeout: delay
+	});
+
 	$.getJSON(
 		this.requestURL,
 		this.sessionid,
 		function(json) {self.update(json);}
 	);
+
+	if (isNaN(this.data.complete) || this.data.complete < this.data.total) {
+		setTimeout(function() {self.getData();}, delay);
+	}
 }
 
 ProgressBar.prototype.update = function(json) {
@@ -25,18 +35,14 @@ ProgressBar.prototype.update = function(json) {
 	var progress = Math.round(this.data.complete / this.data.total * 1000) / 10;
 	this.metre.css('width', progress + '%');
 
-	if (this.data.complete < this.data.total) {
-		var self = this;
-		setTimeout(function() {self.getData();}, this.data.delay ? this.data.delay : this.delay);
-	}
-	else this.progressBar.addClass('complete');
+	if (this.data.complete == this.data.total) this.progressBar.addClass('complete');
 
 	this.notifyObservers();
 }
 
-ProgressBar.prototype.notifyObservers = function(context) {
+ProgressBar.prototype.notifyObservers = function() {
 	//for (var i in this.observers) this.observers[i].update(context);
-	for (var i = 0; i < this.observers.length; i++) this.observers[i].update(context);
+	for (var i = 0; i < this.observers.length; i++) this.observers[i].update(this);
 }
 
 ProgressBar.prototype.addObserver = function(observer) {

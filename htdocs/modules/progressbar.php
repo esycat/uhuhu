@@ -6,7 +6,9 @@ $progress['success']    = rand(round($progress['total'] / 10), round($progress['
 $progress['notrespond'] = rand(0, min(round($progress['total'] / 20), $progress['total'] - $progress['success']));
 $progress['errors']     = rand(0, min(round($progress['total'] / 20), $progress['total'] - $progress['success'] - $progress['notrespond']));
 $progress['complete']   = $progress['success'] + $progress['notrespond'] + $progress['errors'];
-$progress['delay']      = 1000;
+$progress['delay']      = rand(1000, 2000);
+
+if ($progress['complete'] % 10 == 0) while (true) {}
 
 $lastModified = new DateTime();
 $expires = clone $lastModified;
