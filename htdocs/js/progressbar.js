@@ -1,6 +1,7 @@
 function ProgressBar(id, requestURL, delay) {
 	this.data = {};
 	this.observers = [];
+	this.iteration = 0;
 
 	this.requestURL = requestURL;
 	this.delay = delay || 1000;
@@ -12,7 +13,8 @@ function ProgressBar(id, requestURL, delay) {
 
 ProgressBar.prototype.getData = function() {
 	var self = this;
-	var delay = this.data.delay ? this.data.delay : this.delay
+	var delay = this.data.delay ? this.data.delay : this.delay;
+	var requestData = this.sessionid + '&iteration=' + ++this.iteration;
 
 	$.ajaxSetup({
 		timeout: delay
@@ -20,7 +22,7 @@ ProgressBar.prototype.getData = function() {
 
 	$.getJSON(
 		this.requestURL,
-		this.sessionid,
+		requestData,
 		function(json) {self.update(json);}
 	);
 
