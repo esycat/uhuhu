@@ -19,9 +19,10 @@ div.orange, h1.orange, h3.orange {
 }
 
 /* Rounded corners */
-div.rc-container {
-	margin: 0 !importnat;
-	padding: 0 !importnat;
+.rc-container {
+	/*width: auto !important;*/
+	height: auto !important;
+	padding: 0 !important;
 }
 
 div.rc {
@@ -37,6 +38,9 @@ div.rc.bl {background-position: bottom left !important;}
 /* Page headers */
 #content div.header .mark {
 	position: absolute;
+	width: 40px;
+	height: 1.2em;
+	padding: .3em 0;
 	background: #72b2ef url('../images/header_mark.png') center no-repeat;
 }
 
@@ -48,7 +52,7 @@ div.rc.bl {background-position: bottom left !important;}
 
 #content div.header .title {
 	margin: 0 0 0 42px;
-	padding: 0;
+	padding: .3em 1.2em;
 	background-color: #ebebeb;
 	color: black;
 	font-size: 100%;

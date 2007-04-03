@@ -67,6 +67,7 @@ function openPopup(location, name, width, height, left, top) {
  * @return void
  */
 function applyRoundedCorners(el, settings) {
+//return;
 	var content = $(el).html();
 	$(el).empty();
 

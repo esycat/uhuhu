@@ -9,17 +9,13 @@
 #sitelist h3 {
 	margin: 0;
 	margin-bottom: 5px;
-	padding: 0;
+	padding: .3em 1em;
 	background-color: #205c8f;
 	color: white;
 	font-size: 100%;
 	font-weight: normal;
 }
-
-#sitelist h3 .colin {
-	height: 100%;
-	padding: .3em 1em;
-}
+#sitelist h3 .colin {padding: .3em 1em;}
 
 #sitelist ul {
 	margin: 0;

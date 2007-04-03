@@ -22,14 +22,14 @@ h2.arrowed span {
 	background: url('../images/arrows/general_orange_down.png') no-repeat right bottom;
 }
 
-h3 {
+#content h3 {
 	margin: .3em 0;
 	padding-top: .25em;
 	font-size: 100%;
 	font-weight: normal;
 }
 
-h3.hr {
+#content h3.hr {
 	border-top: 1px dashed #d0d0d0;
 }
 
