@@ -1,6 +1,10 @@
+function selectedOptionChange() {
+	if ($(this.options[this.selectedIndex]).is('.selected')) $(this).addClass('selected');
+	else $(this).removeClass('selected');
+}
+
 $(document).ready(function() {
-	$('select').change(function() {
-		if ($(this.options[this.selectedIndex]).is('.selected')) $(this).addClass('selected');
-		else $(this).removeClass('selected');
-	}).change();
+	if (!$.browser.msie) {
+		$('.catreg').find('select').change(selectedOptionChange).change();
+	}
 });

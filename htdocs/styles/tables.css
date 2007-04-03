@@ -1,7 +1,7 @@
-#content table tr.odd {}
 #content table tr.even {
 	background-color: #ebebeb;
 }
+#content table tr.odd {}
 
 #content table.plain {border-collapse: collapse;}
 #content table.plain td {padding: 0;}

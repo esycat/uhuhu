@@ -103,7 +103,3 @@ RegistrationFormValidation.prototype.validate = function(field) {
 
 	return this.status;
 }
-
-FormValidation.prototype.test = function() {
-	alert('>>> this.testVar: ' + this.testVar + "\n" + '>>> this.form: ' + this.form);
-}

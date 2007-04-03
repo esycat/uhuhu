@@ -20,10 +20,10 @@ InputPlaceholder.prototype.init = function() {
 	var self = this;
 	var handler = function(event) {self.handler(event, this)};
 
-	$("." + this.className).focus(handler);
-	$("." + this.className).blur(handler);
-	$("." + this.className).change(handler);
-	$("." + this.className).each(handler);
+	$('.' + this.className).focus(handler);
+	$('.' + this.className).blur(handler);
+	$('.' + this.className).change(handler);
+	$('.' + this.className).each(handler);
 }
 
 /**

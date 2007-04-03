@@ -118,6 +118,9 @@ function inputCounter(el, maxLength, reverse) {
 	return counterValue;
 }
 
+/**
+ * Applies character counter handler to elements
+ */
 function applyCountable(el) {
 	var el = $(el);
 	if (!el.is('.countable')) el = $(el).find('.countable');

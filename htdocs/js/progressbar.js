@@ -1,3 +1,10 @@
+/**
+ * Progress bar
+ *
+ * @param String id -- progress bar element ID
+ * @param String requestURL -- URL for request progress data updates
+ * @param Integer delay -- default delay between requests
+ */
 function ProgressBar(id, requestURL, delay) {
 	this.data = {};
 	this.observers = [];
@@ -11,6 +18,9 @@ function ProgressBar(id, requestURL, delay) {
 	this.sessionid   = $('#reg-sessionid').serialize();
 }
 
+/**
+ * Requests progress data and runs this.update();
+ */
 ProgressBar.prototype.getData = function() {
 	var self = this;
 	var delay = this.data.delay ? this.data.delay : this.delay;
@@ -31,6 +41,11 @@ ProgressBar.prototype.getData = function() {
 	}
 }
 
+/**
+ * Updates progress bar and runs this.getData() again
+ *
+ * @param Object json -- JSON data, returned by backend
+ */
 ProgressBar.prototype.update = function(json) {
 	this.data = json;
 

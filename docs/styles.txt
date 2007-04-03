@@ -1,0 +1,116 @@
+= Стили =
+
+Файлы стилей располагаются в директории <code>/resources/styles/</code> от корня сайта.
+
+Файлы стилей сохранены в кодировке UTF-8 с использованием Unix разделителем строк.
+
+В стилях указаны относительные пути к изображениям. Поэтому при изменении расположения файлов стилей относительно файлов изображений следует внести соответствующие изменения.
+
+== Структура ==
+Таблицы стилей условно разделены на общие и дополнительные.
+
+=== Общие ===
+Общими являются таблицы стилей, подключаемые на большинстве страниц.
+
+Данные стили в свою очередь разделены по области воздействия и располагаются в файлах с соответствующими именами.
+Эти файлы импортируются в основной таблице стилей <code>theme.css</code>, которая подключается в HTML.
+
+: Порядок импортирования файлов стилей может влиять на результат оформления.
+
+Стили, объединяемые <code>theme.css</code>, предназначены для применения при отображении на обычном экране.
+К общим также относятся таблицы стилей предназначенные для печати, отображения на портативных устройствах и т. п.
+
+: К сожалению, в отличие от нормальных браузеров, даже последняя версия MSIE не позволяет в конструкции <code>@import</code> указывать <code>media</code>, поэтому подключение таблиц стилей в зависимости от <code>media</code> приходится выносить в HTML.
+
+Кроме этого, непосредственно в HTML используя Conditional comments подключаются файлы со стилями, предназначенными для применения только при просмотре в MSIE.
+
+=== Дополнительные ===
+Дополнительными являются таблицы стилей, используемые только на определённых страницах и подключаемые только на этих страницах.
+Данные стили не имеют какого-либо иного логического разбиения. 
+
+'''Список файлов дополнительных стилей:'''
+* catlist.css
+* catreg.css
+* login.css
+* money.css
+* site.css
+* sitelist.css
+
+=== Темы ===
+Подобная модульная организация структуры стилей вместе с семантической вёрсткой позволяют очень легко создавать для сайта различные «шкурки» на основе CSS.
+Для этого достаточно создавать альтернативные основные таблицы стилей (например, предусмотрены темы «для девочек» и «для мальчиков») и подключать их в HTML соответствующим образом.
+
+Причём у различных тем могут быть общие составляющие. Это особенно удобно, если темы отличаются незначительно (например, темы для девочек и для мальчиков отличаются только цветовой схемой).
+
+=== Пример подключения ===
+'''Пример подключения общих, дополнительных (<code>sitelist.css</code>) и альтернативных таблиц стилей:'''
+<pre>
+<link type="text/css" rel="stylesheet" media="screen" href="./styles/theme.css" />
+<!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie.css" /><![endif]-->
+<!--[if lt IE 7]><link rel="stylesheet" type="text/css" media="screen" href="./styles/ie6.css" /><![endif]-->
+<link type="text/css" rel="stylesheet" media="print" href="./styles/print.css" />
+<link type="text/css" rel="stylesheet" media="screen" href="./styles/sitelist.css" />
+<link type="text/css" rel="alternative stylesheet" media="screen" href="./styles/theme-girls.css" title="For girls" />
+<link type="text/css" rel="alternative stylesheet" media="screen" href="./styles/theme-boys.css" title="For boys" />
+</pre>
+
+== Описание ==
+Большинство правил ограничеваются по применению в пределах оснвоных элементов вёрстки (см. markup.txt).
+Например, большинство правил, предназначенных для оформления контента, ограничены <code>#content</code>.
+
+=== Цветовое оформление ===
+В оформлении сайта имеется несколько основных цветов элементов для которых предусмотрены соответствующие стили:
+* <code>.ddarkblue</code>
+* <code>.darkblue</code>
+* <code>.skyblue</code>
+* <code>.orange</code>
+Данные стили могут быть применены к элементам <code>div</code>, <code>h1</code> и <code>h3</code>.
+
+=== Размеры ===
+* <code>.full-width</code>
+* <code>.fixed-width</code>
+* <code>.half-width</code>
+* <code>.onethird-width</code>
+Данные стили могут быть применены к любым block-level элементам, но рекомендуется использовать их только для <code>div</code>, <code>ul/ol</code> и <code>table</code>. 
+
+=== Прочее ===
+* <code>.cleaner</code>
+* <code>.cleaner-left</code>
+* <code>.cleaner-right</code>
+Данные стили могут быть применены к любым block-level элементам, но рекомендуется использовать их только для <code>div</code>, <code>ul/ol</code> и <code>table</code>. 
+
+=== Видимость ===
+* <code>.invisible</code>
+* <code>.hidden</code>
+Данные стили могут быть применены к любым элементам, но рекомендуется использовать их только для block-level элементов.
+
+=== Списки ===
+* <code>.plain</code>
+* <code>ul.arrowed</code>
+* <code>ul.chevroned</code>
+* <code>ul.hint</code>
+* <code>ul.form</code>
+
+=== Таблицы ===
+* <code>.data</code>
+* <code>.plain</code>
+
+* <code>tr.even</code>
+* <code>tr.odd</code>
+ 
+=== Формы ===
+* <code>form.brief</code>
+
+* <code>.field</code>
+* <code>.field.correct</code>
+* <code>.field.error</code>
+
+* <code>.label</code>
+* <code>.controls</code>
+* <code>.misc</code>
+* <code>.counter</code>
+* <code>.status</code>
+* <code>.description</code>
+* <code>.message</code>
+* <code>.buttons</code>
+ 

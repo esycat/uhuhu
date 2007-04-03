@@ -1,9 +1,15 @@
+/**
+ * Main form validation class
+ *
+ * @param HTMLFormElement form 
+ */
 function FormValidation(form) {
 	this.errorClassName = 'error';
 	this.correctClassName = 'correct';
 	this.messageClassName = 'message';
 
 	this.patterns = {
+		//protocol: '((http|ftp)s?)',
 		protocol: 'https?',
 		domain: '(([0-9a-z])(([0-9a-z\-]*)?[0-9a-z])?\.)+([a-z]{2,})',
 		username: '[0-9a-z]([0-9a-z\-.]*[0-9a-z])?'
@@ -20,6 +26,9 @@ function FormValidation(form) {
 	if (this.form && this.validate) this.form.validate = this.validate;
 }
 
+/**
+ * Initializes form element handlers
+ */
 FormValidation.prototype.init = function() {
 	var self = this;
 	this.onsubmit = $(this.form).submit(function() {return self.validate();});
@@ -34,7 +43,6 @@ FormValidation.prototype.init = function() {
  * Validates form field
  *
  * @param Object formEl
- * @return void
  */
 FormValidation.prototype.verify = function(formEl) {
 	if (!formEl.value.length) this.setStatus(formEl, false, formEl.vmsg['empty']);
@@ -50,7 +58,6 @@ FormValidation.prototype.verify = function(formEl) {
  * @param Object formEl -- form field
  * @param Boolean status -- value validation status
  * @param String text -- message text
- * @return void
 */
 FormValidation.prototype.setStatus = function(formEl, status, text) {
 	if (!status) this.status = false;

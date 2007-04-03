@@ -20,7 +20,7 @@ input.text, textarea, select {
 	font-size: 100%;
 }
 
-input.text, textarea, select, select option {
+input.text, textarea, select option {
 	background-color: white;
 	color: black;
 }

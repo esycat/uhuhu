@@ -1,12 +1,25 @@
+/**
+ * Site's description form
+ */
 function SiteDescription() {
 	this.groupClassName = 'descgroup';
 	this.minId = 500;
 }
 
+/**
+ * Gets description group of the element
+ *
+ * @param el -- form element
+ */
 SiteDescription.prototype.getDescGroup = function(el) {
 	return $(el).parents('.' + this.groupClassName);
 }
 
+/**
+ * Creates form elements for a new description
+ *
+ * @param el -- form element
+ */
 SiteDescription.prototype.add = function(el) {
 	var collect = $('#descriptions');
 	var newdescr = $(el).parents('.' + this.groupClassName).clone();
@@ -44,11 +57,19 @@ SiteDescription.prototype.add = function(el) {
 	return newdescr.appendTo(collect);
 }
 
+/**
+ * Removes description from form
+ *
+ * @param el -- form element
+ */
 SiteDescription.prototype.remove = function(el) {
 	var descr = $(el).parents('.' + this.groupClassName);
 	if ($(descr).siblings('.' + this.groupClassName).length > 0) descr.remove();
 }
 
+/**
+ * Switches a source, whence to take initial data for description.
+ */
 SiteDescription.prototype.switchSource = function(el) {
 	var descr = $(el).parents('.' + this.groupClassName);
 	if (el.value == 0) $(descr).children().gt(1).addClass('invisible');
