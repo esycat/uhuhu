@@ -21,7 +21,7 @@ div.orange, h1.orange, h3.orange {
 /* Rounded corners */
 .rc-container {
 	/*width: auto !important;*/
-	height: auto !important;
+	/*height: auto !important;*/
 	padding: 0 !important;
 }
 
@@ -39,15 +39,13 @@ div.rc.bl {background-position: bottom left !important;}
 #content div.header .mark {
 	position: absolute;
 	width: 40px;
-	height: 1.2em;
-	padding: .3em 0;
+	height: 1.9em;
 	background: #72b2ef url('../images/header_mark.png') center no-repeat;
 }
 
 #content div.header .mark .colin {
 	width: 40px;
-	height: 1.3em;
-	padding: .3em 0;
+	height: 1.9em;
 }
 
 #content div.header .title {
