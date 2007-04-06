@@ -12,3 +12,4 @@ input.text, textarea {margin-left: 0;}
 #content form#login .field#passkeyfield .misc {width: 27% !important;}
 
 #content div.info {width: 99.5%;}
+.full-width {width: 99.5% !important;}

@@ -27,6 +27,21 @@
 	padding: 8px;
 }
 
+#content .infoblock .header {
+	margin: 0;
+	margin-left: 42px;
+}
+/*
+#content .infoblock .header .mark {
+	margin: 0;
+}
+
+#content .infoblock .header h3 {
+	margin-left: 42px;
+	margin-right: 0;
+}
+*/
+
 #content .infoblock h4 {
 	margin: 0;
 	padding: 0;

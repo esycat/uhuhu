@@ -69,10 +69,14 @@ body.home #content-second {
 	margin: 15px 42px;
 }
 
+#content {
+	padding-left: 42px;
+}
+
 .content-container {
 	position: relative;
 	z-index: 5;
-	padding: 10px 0 10px 42px;
+/*	padding: 10px 0 10px 42px;*/
 }
 
 #sidebar {
