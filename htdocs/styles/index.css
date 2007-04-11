@@ -29,23 +29,12 @@
 
 #content .infoblock .header {
 	margin: 0;
-	margin-left: 42px;
-}
-/*
-#content .infoblock .header .mark {
-	margin: 0;
+	padding-left: 42px;
 }
 
-#content .infoblock .header h3 {
-	margin-left: 42px;
-	margin-right: 0;
-}
-*/
-
-#content .infoblock h4 {
-	margin: 0;
-	padding: 0;
-	background: none;
+#content div.header .title .colin {
+	width: 90%;
+	padding: .5em 5% !important;
 }
 
 #content .infoblock.news .content p {margin: 0;}

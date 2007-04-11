@@ -8,19 +8,25 @@
 
 
 /* Common data table */
-#content div.datatable .colin {padding: 0 1px;}
+#content div.datatable {
+	width: 100%;
+	clear: both;
+}
+
+#content div.datatable .colin {
+	padding: 1px;
+}
+
+#content div.datatable .container {
+	padding: 0 4px;
+	background: white url('../images/dot.png') repeat-x top;
+}
 
 #content table.data {
 	width: 100%;
-	border-bottom: 1px solid #205c8f;
 	border-collapse: collapse;
 	background-color: white;
 	color: black;
-}
-
-#content table.data th,
-#content table.data td {
-	padding: 0;
 }
 
 #content table.data thead {
@@ -28,29 +34,23 @@
 	color: white;
 }
 
-#content table.data th .colin {
-	padding: .3em 1.2em;
-	line-height: 1.4em;
-}
-
-#content table.data tbody th .colin {
+#content table.data tbody th {
 	background-color: #ebebeb;
-	color: black;
 	text-align: left;
 }
 
-#content table.data .left-side {padding-left: 4px;}
-#content table.data .right-side {padding-right: 4px;}
-
-#content table.data tr.first-child .colin {border: none !important;}
-
-#content table.data td .colin {
-	border-color: #205c8f;
-	border-style: solid;
-	border-width: 0;
-	border-top-width: 1px;
-	margin-bottom: 1px;
+#content table.data th {
+	height: 16px;
 	padding: 3px 15px;
+}
+
+#content table.data td {
+	padding: 3px 15px;
+	border-top: 1px solid #205c8f;
+}
+
+#content table.data tr.first-child td {
+	border: none;
 }
 
 

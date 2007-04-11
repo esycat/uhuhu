@@ -35,7 +35,7 @@ div.rc.bl {background-position: bottom left !important;}
 
 /* Page headers */
 #content div.header {
-/*	width: 100%;*/
+	position: relative;
 	margin-bottom: 10px;
 	color: black;
 	line-height: 100%;
@@ -56,19 +56,16 @@ div.rc.bl {background-position: bottom left !important;}
 }
 
 #content div.header .title {
+	margin: 0;
 	padding: .5em 1.2em;
 	background-color: #ebebeb;
 	font-size: 100%;
 	font-weight: bold;
 }
 
-#content div.header h1 {
-	margin: 0;
-}
-
 #content div.header .title .colin {
-	width: auto;
-	padding: .5em 1.2em !important;
+	width: 96%;
+	padding: .5em 2% !important;
 }
 
 #content div.header .title a {text-decoration: none !important;}

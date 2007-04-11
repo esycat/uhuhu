@@ -2,8 +2,16 @@ a img {border: none;}
 img.icon {vertical-align: middle;}
 img.button {cursor: pointer;}
 
-img.icon.print {
-	float: right;
+div.print {
+	position: absolute;
+	width: 100%;
+}
+
+div.print img.icon {
+	display: block;
+	position: absolute;
+	right: 0;
+	margin: 4px;
 	cursor: pointer;
 	background: url("../images/icons/print.png") no-repeat center;
 }

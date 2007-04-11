@@ -67,7 +67,7 @@ function openPopup(location, name, width, height, left, top) {
  * @return void
  */
 function applyRoundedCorners(el, settings) {
-return;
+//return;
 	var content = $(el).html();
 	$(el).empty();
 
@@ -86,6 +86,7 @@ return;
 	var colin = document.createElement('div');
 	colin.className = 'colin';
 
+	$(el).removeClass('rounded-corners').addClass('rc-container');
 	$(colin).append(content);
 
 	bl.appendChild(colin);
@@ -93,8 +94,6 @@ return;
 	tr.appendChild(br);
 	tl.appendChild(tr);
 	el.appendChild(tl);
-
-	$(el).removeClass('rounded-corners').addClass('rc-container');
 }
 
 /**
